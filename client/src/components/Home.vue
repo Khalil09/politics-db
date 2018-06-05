@@ -1,25 +1,24 @@
 <template>
-  <div class="bg-primary">
+  <div>
     <navbar></navbar>
-    <b-container >
-    </b-container>
+    <ParticlesJS></ParticlesJS>
   </div>
 </template>
 
 <script>
 import Navbar from '@/components/navbar.vue'
+import ParticlesJS from '@/components/Particles'
 
 export default {
-  name: 'HelloWorld',
+  name: 'Home',
   components: {
-    'navbar': Navbar
+    'navbar': Navbar,
+    'ParticlesJS': ParticlesJS
   },
   data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
+    return {}
   }
 }
-</script>
 
+</script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->

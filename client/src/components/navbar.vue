@@ -1,16 +1,15 @@
 <template>
-  <b-navbar toggleable="md" type="dark" variant="info">
+  <b-navbar toggleable="md" type="dark" variant="secondary">
     <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-    <b-navbar-brand href="#">NavBar</b-navbar-brand>
+    <b-navbar-brand v-bind:to="'/'">NavBar</b-navbar-brand>
 
     <b-collapse is-nav id="nav_collapse">
 
       <b-navbar-nav>
-        <b-nav-item href="#">Link</b-nav-item>
-        <b-nav-item href="#" disabled>Disabled</b-nav-item>
+        <b-nav-item v-bind:to="'/posts'">Posts</b-nav-item>
+        <b-nav-item v-bind:to="'/about'">About Us</b-nav-item>
       </b-navbar-nav>
-
-      <!-- Right aligned nav items -->
+        <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
 
         <b-nav-form>
