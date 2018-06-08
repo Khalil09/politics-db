@@ -2,10 +2,9 @@
 
 const readConfig = require('../lib/readConfig');
 const connectDB = require('../lib/connectDB');
-var mysql = require('mysql');
-var fs = require('fs');
 
 readConfig.read((config) => {
+
   console.log('\x1b[33m%s\x1b[0m', "-> Creating database...")
   connectDB.makeConnection((con) => {
     var createQuery = "CREATE DATABASE IF NOT EXISTS " + config.config_database.database;

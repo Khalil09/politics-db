@@ -8,7 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "createdb": "bin/createdb.js"
+    "create-db": "bin/createdb.js",
+    "drop-db": "bin/dropdb.js",
+    "migrate-db": "bin/migratedb.js"
   },
   "keywords": [],
   "author": "",

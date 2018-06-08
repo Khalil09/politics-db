@@ -1,0 +1,1 @@
+CREATE TABLE politic (name VARCHAR(20), age VARCHAR(20), pilanage VARCHAR(20), sex CHAR(1), birth DATE);

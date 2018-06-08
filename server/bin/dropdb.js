@@ -2,8 +2,6 @@
 
 const readConfig = require('../lib/readConfig');
 const connectDB = require('../lib/connectDB');
-var mysql = require('mysql');
-var fs = require('fs');
 
 readConfig.read((config) => {
 
