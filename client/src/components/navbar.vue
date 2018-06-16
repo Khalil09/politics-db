@@ -6,7 +6,6 @@
     <b-collapse is-nav id="nav_collapse">
 
       <b-navbar-nav>
-        <b-nav-item v-bind:to="'/posts'">Posts</b-nav-item>
         <b-nav-item v-bind:to="'/about'">About Us</b-nav-item>
       </b-navbar-nav>
         <!-- Right aligned nav items -->
