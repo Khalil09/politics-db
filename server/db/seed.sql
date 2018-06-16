@@ -1,1 +1,1 @@
-CREATE TABLE politic (name VARCHAR(20), age VARCHAR(20), pilanage VARCHAR(20), sex CHAR(1), birth DATE);
+INSERT INTO Estado (nome, area, regiao, sigla, codigo_est) VALUES ("Rondônia", "237,576km2", "Norte", "RO", 11);

@@ -19,6 +19,8 @@
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
     "express": "^4.16.3",
+    "fs-promise": "^2.0.3",
+    "jsonschema": "^1.2.4",
     "morgan": "^1.9.0",
     "mysql": "^2.15.0",
     "nodemon": "^1.17.4"
