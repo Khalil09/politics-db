@@ -9,7 +9,7 @@
           <!-- put your stuff here -->
         </b-col>
         <b-col cols="8">
-          <dbTable></dbTable>
+          <dbTable v-bind:items="items"></dbTable>
         </b-col>
         <b-col></b-col>
       </b-row>
@@ -28,7 +28,14 @@ export default {
     'dbTable': DBTable
   },
   data () {
-    return {}
+    return {
+      items: [
+        { isActive: true, age: 40, first_name: 'Dickerson', last_name: 'Macdonald' },
+        { isActive: false, age: 21, first_name: 'Larsen', last_name: 'Shaw' },
+        { isActive: false, age: 89, first_name: 'Geneva', last_name: 'Wilson' },
+        { isActive: true, age: 38, first_name: 'Jami', last_name: 'Carney' }
+      ]
+    }
   }
 }
 
