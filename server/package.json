@@ -7,6 +7,11 @@
     "start": "./node_modules/nodemon/bin/nodemon.js src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "create-db": "bin/createdb.js",
+    "drop-db": "bin/dropdb.js",
+    "migrate-db": "bin/migratedb.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
