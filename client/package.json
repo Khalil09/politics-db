@@ -20,7 +20,8 @@
     "particles.js": "^2.0.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-    "vue-sticky": "^3.3.4"
+    "vue-sticky": "^3.3.4",
+    "vue2-sidebar": "0.0.9"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
