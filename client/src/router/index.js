@@ -4,6 +4,7 @@ import Home from '@/components/Home'
 import Posts from '@/components/Posts'
 import About from '@/components/About'
 
+
 Vue.use(Router)
 
 export default new Router({

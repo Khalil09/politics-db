@@ -1,19 +1,16 @@
 <template>
   <div>
     <navbar></navbar>
-    <ParticlesJS></ParticlesJS>
   </div>
 </template>
 
 <script>
 import Navbar from '@/components/navbar.vue'
-import ParticlesJS from '@/components/Particles'
 
 export default {
   name: 'Home',
   components: {
     'navbar': Navbar,
-    'ParticlesJS': ParticlesJS
   },
   data () {
     return {}
