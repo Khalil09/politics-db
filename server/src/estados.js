@@ -5,11 +5,15 @@
 //   console.log("Conectado com Sucesso")
 // })
 
+const connectDB = require('../lib/connectDB');
+
 module.exports = {
-  getEstados: function(req, res, con) {
-    query = con.query("select * from Estado", (err, row) => {
-              if (err) throw err;
-              res.json(row);
-            });
+  getEstados: function(req, res){
+    connectDB.makeConnection((con) => {
+      con.query("select * from Estado", (err, row) => {
+        if (err) throw err;
+        res.json(row);
+      });
+    }, true)
   }
 }
