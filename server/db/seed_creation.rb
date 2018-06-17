@@ -14,6 +14,7 @@ def rand_alphanum(length)
 end
 
 $house_nums = Array(1..1000)
+$partido = [15, 13, 45, 11, 12, 14, 25, 22, 40, 23]
 
 
 def mun_insert(name = nil) 
@@ -61,7 +62,7 @@ def secao_rand_insert
 end
 
 def urna_rand_insert
-  "INSERT INTO secao (id_secao)
+  "INSERT INTO urna (id_secao)
    SELECT secao.id
    FROM secao
    ORDER BY rand()
@@ -91,20 +92,30 @@ def candidato_insert
 end
 
 def pres_insert
+  partido =  $partidos.delete($partidos.sample)
   pres = Faker::Name.name
   vice = Faker::Name.name
   eleitor_insert(pres) + 
   eleitor_insert(vice) + 
   "INSERT INTO candidato (id_pessoa, id_partido, id_cargo)
-   SELECT eleitor.id, partido.id, 1
-   FROM eleitor, partido
+   SELECT eleitor.id, #{partido}, 1
+   FROM eleitor
    WHERE eleitor.nome = '#{pres}'
    ORDER BY rand()
    LIMIT 1;\n\n" +
   "INSERT INTO candidato (id_pessoa, id_partido, id_cargo)
-   SELECT eleitor.id, partido.id, 2
-   FROM eleitor, partido
+   SELECT eleitor.id, #{partido}, 2
+   FROM eleitor
    WHERE eleitor.nome = '#{vice}'
+   ORDER BY rand()
+   LIMIT 1;\n\n"
+end
+
+def voto_insert
+  "INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '#{Faker::Time.backward(14, :evening).to_s.chomp(' -0300')}', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
    ORDER BY rand()
    LIMIT 1;\n\n"
 end
@@ -118,7 +129,8 @@ sqlinsert = {
   'urna' => :urna_rand_insert,
   'eleitor' => :eleitor_insert,
   'candidato' => :candidato_insert,
-  'presidente' => :pres_insert
+  'presidente' => :pres_insert,
+  'voto' => :voto_insert
 }
 
 File.open(seed_name, 'a') do |file|
