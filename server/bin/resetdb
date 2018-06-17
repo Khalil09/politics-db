@@ -1,0 +1,6 @@
+#!/bin/bash
+
+./bin/dropdb.js
+./bin/createdb.js
+./bin/migratedb.js
+./bin/seeddb.js

@@ -1,7 +1,7 @@
 INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Acre", "152,581km2", "Norte", "AC", 12);
 INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Rondônia", "237,576km2", "Norte", "RO", 11);
-INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Amazonas", "1,571,000km2", "Norte", "AM", 13);
-INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Roraima", "224,299km2", "Norte", "RR", 11);
+INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Amazonas", "1571000km2", "Norte", "AM", 13);
+INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Roraima", "224,299km2", "Norte", "RR", 14);
 INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Pará", "1,247,954km2", "Norte", "PA", 15);
 INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Amapá", "142,828km2", "Norte", "AP", 16);
 INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Tocantins", "277,720km2", "Norte", "TO", 17);
@@ -25,3 +25,17 @@ INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Mato Grosso do Sul",
 INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Mato Grosso", "903,366km2", "MT", "RS", 51);
 INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Goiás", "340,111km2", "Sul", "GO", 52);
 INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Distrito Federal", "5,780km2", "Sul", "DF", 53);
+
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+ SELECT PK, Velha Ana Luiza, 24064, estado.id
+ FROM estado
+ WHERE nome = Acre
+ LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+ SELECT PK, Velha Ana Luiza, 24064, estado.id
+ FROM estado
+ WHERE nome = Acre
+ LIMIT 1;
+
