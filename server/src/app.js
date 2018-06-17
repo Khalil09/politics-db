@@ -23,12 +23,21 @@ app.get('/api/:table/:id', (req, res) => {
   indexTable.getById(req, res);
 })
 
+// Eleitor CRUD
 app.get('/api/eleitor/completo/:id', (req, res) => {
   eleitor.getEleitor(req, res);
 })
 
 app.post('/api/eleitor/new', (req, res) => {
   eleitor.createEleitor(req, res);
+})
+
+app.delete('/api/eleitor/:id', (req, res) => {
+  eleitor.deleteEleitor(req, res);
+})
+
+app.post('/api/eleitor/update/:id', (req, res) => {
+  eleitor.updateEleitor(req, res);
 })
 
 app.listen(process.env.PORT || 8081)

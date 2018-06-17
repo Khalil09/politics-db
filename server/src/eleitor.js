@@ -53,5 +53,49 @@ module.exports = {
         });
       });
     }, true)
+  },
+
+  deleteEleitor: function(req, res){
+    connectDB.makeConnection((con) => {
+      var q = "DELETE FROM eleitor WHERE eleitor.id = " + req.param("id");
+
+      con.query(q, (err, row) => {
+        if (err){
+          res.status(400);
+          res.json({"error": "Erro ao deletar o eleitor"})
+          throw err;
+        }
+        res.status(200)
+        if(row.affectedRows == 0){
+          res.json({"message": "Não existe tal eleitor"});
+        } else {
+          res.json({"message": "Deletado com sucesso"});
+        }
+      });
+    }, true)
+  },
+
+  updateEleitor: function(req, res){
+    connectDB.makeConnection((con) => {
+      var q = "UPDATE eleitor SET titulo_eleitor = ?, nome = ?, data_de_nasc = ?, genero = ?, id_secao = ? WHERE id = " + req.param('id');
+
+      var values = [
+        req.body.titulo_eleitor,
+        req.body.nome,
+        req.body.data_de_nasc,
+        req.body.genero,
+        req.body.id_secao
+      ]
+      
+      con.query(q, values,(err, row) => {
+        if (err){
+          res.status(400);
+          res.json({"error": "Não foi possível executar a atualização"})
+          throw err;
+        }
+        res.status(200)
+        res.json({"message": "Atualizado com sucesso"});
+      });
+    }, true)
   }
 }
