@@ -3,15 +3,14 @@
     <navbar></navbar>
     <b-container fluid>
       <b-row>
-        <b-col class="noPadding">
+        <b-col cols="2" class="noPadding">
           <TableList></TableList>
         </b-col>
         <b-col cols="8">
           <br/>
-          <br/>
           <dbTable v-bind:dt="items"></dbTable>
         </b-col>
-        <b-col></b-col>
+        <b-col cols="2"></b-col>
       </b-row>
     </b-container>
   </div>
