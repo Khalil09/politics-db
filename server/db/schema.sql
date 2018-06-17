@@ -1,10 +1,10 @@
-CREATE TABLE Local (
+CREATE TABLE local (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100),
     id_local INTEGER
 );
 
-CREATE TABLE Municipio (
+CREATE TABLE municipio (
     sigla VARCHAR(10),
     nome VARCHAR(100),
     area VARCHAR(10),
@@ -12,19 +12,19 @@ CREATE TABLE Municipio (
     id INTEGER PRIMARY KEY AUTO_INCREMENT
 );
 
-CREATE TABLE Partido (
+CREATE TABLE partido (
     nome VARCHAR(100),
     id INTEGER PRIMARY KEY,
     dt_criacao DATETIME,
     sigla VARCHAR(10)
 );
 
-CREATE TABLE Chapa (
+CREATE TABLE chapa (
     nome VARCHAR(100),
     id INTEGER PRIMARY KEY AUTO_INCREMENT
 );
 
-CREATE TABLE Candidato (
+CREATE TABLE candidato (
     foto BLOB,
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     id_pessoa INTEGER,
@@ -32,25 +32,25 @@ CREATE TABLE Candidato (
     id_cargo INTEGER,
     id_chapa INTEGER,
     UNIQUE(id_pessoa),
-    FOREIGN KEY(id_partido) REFERENCES Partido (id) ON DELETE SET NULL,
-    FOREIGN KEY(id_chapa) REFERENCES Chapa (id) ON DELETE SET NULL
+    FOREIGN KEY(id_partido) REFERENCES partido (id) ON DELETE SET NULL,
+    FOREIGN KEY(id_chapa) REFERENCES chapa (id) ON DELETE SET NULL
 );
 
-CREATE TABLE Voto (
+CREATE TABLE voto (
     data DATETIME,
     id_eleitor INTEGER,
     id_candidato INTEGER,
     id_urna INTEGER,
     PRIMARY KEY(id_eleitor, id_candidato),
-    FOREIGN KEY(id_candidato) REFERENCES Candidato (id) ON DELETE CASCADE
+    FOREIGN KEY(id_candidato) REFERENCES candidato (id) ON DELETE CASCADE
 );
 
-CREATE TABLE Urna (
+CREATE TABLE urna (
     id INTEGER PRIMARY KEY,
     id_secao INTEGER
 );
 
-CREATE TABLE Estado (
+CREATE TABLE estado (
     nome VARCHAR(100),
     area VARCHAR(10),
     regiao VARCHAR(100),
@@ -58,7 +58,7 @@ CREATE TABLE Estado (
     id INTEGER PRIMARY KEY
 );
 
-CREATE TABLE Empresa (
+CREATE TABLE empresa (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     tipo_de_empresa VARCHAR(100),
     razao_social VARCHAR(100),
@@ -66,7 +66,7 @@ CREATE TABLE Empresa (
     cnpj VARCHAR(30)
 );
 
-CREATE TABLE Endereço (
+CREATE TABLE endereco (
     bairro VARCHAR(100),
     id INTEGER,
     rua VARCHAR(500),
@@ -74,61 +74,61 @@ CREATE TABLE Endereço (
     complemento VARCHAR(100),
     id_municipio INTEGER,
     PRIMARY KEY(id,cep),
-    FOREIGN KEY(id_municipio) REFERENCES Municipio (id) ON DELETE CASCADE
+    FOREIGN KEY(id_municipio) REFERENCES municipio (id) ON DELETE CASCADE
 );
 
-CREATE TABLE Zona (
+CREATE TABLE zona (
     nome VARCHAR(100),
     id INTEGER PRIMARY KEY,
     id_municipio INTEGER,
-    FOREIGN KEY(id_municipio) REFERENCES Municipio (id) ON DELETE CASCADE
+    FOREIGN KEY(id_municipio) REFERENCES municipio (id) ON DELETE CASCADE
 );
 
-CREATE TABLE Cargo (
+CREATE TABLE cargo (
     nome VARCHAR(100),
     id INTEGER PRIMARY KEY AUTO_INCREMENT
 );
 
-CREATE TABLE Secao (
+CREATE TABLE secao (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100),
     id_local INTEGER,
-    FOREIGN KEY(id_local) REFERENCES Local (id)
+    FOREIGN KEY(id_local) REFERENCES local (id)
 );
 
-CREATE TABLE Doacao (
+CREATE TABLE doacao (
     data DATETIME,
     valor DECIMAL(12,2),
     id INTEGER PRIMARY KEY,
     id_empresa INTEGER,
     id_partido INTEGER,
-    FOREIGN KEY(id_empresa) REFERENCES Empresa (id),
-    FOREIGN KEY(id_partido) REFERENCES Partido (id)
+    FOREIGN KEY(id_empresa) REFERENCES empresa (id),
+    FOREIGN KEY(id_partido) REFERENCES partido (id)
 );
 
-CREATE TABLE Mesario (
+CREATE TABLE mesario (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     id_eleitor INTEGER,
     id_secao INTEGER,
-    FOREIGN KEY(id_secao) REFERENCES Secao (id),
+    FOREIGN KEY(id_secao) REFERENCES secao (id),
     UNIQUE(id_eleitor)
 );
 
-CREATE TABLE Pessoa_fisica (
+CREATE TABLE eleitor (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     titulo_eleitor BIGINT(20),
     nome VARCHAR(100),
     data_de_nasc DATETIME,
     genero VARCHAR(50),
     id_secao INTEGER,
-    FOREIGN KEY(id_secao) REFERENCES Secao (id)
+    FOREIGN KEY(id_secao) REFERENCES secao (id)
 );
 
-ALTER TABLE Local ADD FOREIGN KEY(id_local) REFERENCES Zona (id);
-ALTER TABLE Municipio ADD FOREIGN KEY(id_estado) REFERENCES Estado (id);
-ALTER TABLE Candidato ADD FOREIGN KEY(id_pessoa) REFERENCES Pessoa_fisica (id);
-ALTER TABLE Candidato ADD FOREIGN KEY(id_cargo) REFERENCES Cargo (id);
-ALTER TABLE Voto ADD FOREIGN KEY(id_eleitor) REFERENCES Pessoa_fisica (id);
-ALTER TABLE Voto ADD FOREIGN KEY(id_urna) REFERENCES Urna (id);
-ALTER TABLE Urna ADD FOREIGN KEY(id_secao) REFERENCES Secao (id);
-ALTER TABLE Mesario ADD FOREIGN KEY(id_eleitor) REFERENCES Pessoa_fisica (id);
+ALTER TABLE local ADD FOREIGN KEY(id_local) REFERENCES zona (id);
+ALTER TABLE municipio ADD FOREIGN KEY(id_estado) REFERENCES estado (id);
+ALTER TABLE candidato ADD FOREIGN KEY(id_pessoa) REFERENCES eleitor (id);
+ALTER TABLE candidato ADD FOREIGN KEY(id_cargo) REFERENCES cargo (id);
+ALTER TABLE voto ADD FOREIGN KEY(id_eleitor) REFERENCES eleitor (id);
+ALTER TABLE voto ADD FOREIGN KEY(id_urna) REFERENCES urna (id);
+ALTER TABLE urna ADD FOREIGN KEY(id_secao) REFERENCES secao (id);
+ALTER TABLE mesario ADD FOREIGN KEY(id_eleitor) REFERENCES eleitor (id);
