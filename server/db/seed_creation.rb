@@ -68,20 +68,57 @@ def urna_rand_insert
    LIMIT 1;\n\n"
 end
 
-def eleitor_insert
+def eleitor_insert(name = nil)
   generos = ['homem', 'mulher']
+  name ||= Faker::Name.name
   "INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
-   SELECT '#{rand(99999999)}', '#{Faker::Name.name}', '#{Faker::Date.birthday(18, 120).to_s}', '#{generos.sample}', secao.id, endereco.cep, endereco.id
+   SELECT '#{rand(99999999)}', '#{name}', '#{Faker::Date.birthday(18, 120).to_s}', '#{generos.sample}', secao.id, endereco.cep, endereco.id
    FROM secao, endereco, zona, local
    WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
    ORDER BY rand()
    LIMIT 1;\n\n"
 end
 
+def candidato_insert
+  name = Faker::Name.name
+  eleitor_insert(name) + 
+  "INSERT INTO candidato (id_pessoa, id_partido, id_cargo)
+   SELECT eleitor.id, partido.id, #{rand(4) + 3}
+   FROM eleitor, partido
+   WHERE eleitor.nome = '#{name}'
+   ORDER BY rand()
+   LIMIT 1;\n\n"
+end
+
+def pres_insert
+  pres = Faker::Name.name
+  vice = Faker::Name.name
+  eleitor_insert(pres) + 
+  eleitor_insert(vice) + 
+  "INSERT INTO candidato (id_pessoa, id_partido, id_cargo)
+   SELECT eleitor.id, partido.id, 1
+   FROM eleitor, partido
+   WHERE eleitor.nome = '#{pres}'
+   ORDER BY rand()
+   LIMIT 1;\n\n" +
+  "INSERT INTO candidato (id_pessoa, id_partido, id_cargo)
+   SELECT eleitor.id, partido.id, 2
+   FROM eleitor, partido
+   WHERE eleitor.nome = '#{vice}'
+   ORDER BY rand()
+   LIMIT 1;\n\n"
+end
+
 sqlinsert = {
+  'municipio' => :mun_insert, 
+  'endereco' => :addr_insert,
+  'zona' => :zona_rand_insert,
+  'local' => :local_rand_insert,
   'secao' => :secao_rand_insert,
   'urna' => :urna_rand_insert,
-  'eleitor' => :eleitor_insert
+  'eleitor' => :eleitor_insert,
+  'candidato' => :candidato_insert,
+  'presidente' => :pres_insert
 }
 
 File.open(seed_name, 'a') do |file|
