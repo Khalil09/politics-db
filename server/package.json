@@ -10,7 +10,9 @@
   "bin": {
     "create-db": "bin/createdb.js",
     "drop-db": "bin/dropdb.js",
-    "migrate-db": "bin/migratedb.js"
+    "migrate-db": "bin/migratedb.js",
+    "seed-db": "bin/migratedb.js",
+    "reset-db": "bin/resetdb"
   },
   "keywords": [],
   "author": "",

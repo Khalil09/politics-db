@@ -1,5 +1,5 @@
 INSERT INTO partido (nome, id, dt_criacao, sigla) 
-    VALUES ('Movimento Democrático Brasileiro', 15, '1965-23-04', 'MDB');
+    VALUES ('Movimento Democrático Brasileiro', 15, '1965-04-23', 'MDB');
 INSERT INTO partido (nome, id, dt_criacao, sigla) 
     VALUES ('Partido dos Trabalhadores', 13, '1980-02-10', 'PR');
 INSERT INTO partido (nome, id, dt_criacao, sigla) 
@@ -172,5 +172,1135 @@ INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
    SELECT 'University Heights', 17, 'Rua Pietro', 77507426, 'Sobrado 15', municipio.id
    FROM municipio
    WHERE nome = 'Velha Natália'
+   LIMIT 1;
+
+INSERT INTO zona (nome, id_municipio)
+   SELECT 'Rua Thomas Rolim', municipio.id
+   FROM municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO zona (nome, id_municipio)
+   SELECT 'Ponte Heitor Saraiva', municipio.id
+   FROM municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO zona (nome, id_municipio)
+   SELECT 'Travessa João', municipio.id
+   FROM municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO zona (nome, id_municipio)
+   SELECT 'Rodovia Daniel Neves', municipio.id
+   FROM municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO zona (nome, id_municipio)
+   SELECT 'Viela Sarah da Conceição', municipio.id
+   FROM municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO zona (nome, id_municipio)
+   SELECT 'Viela Ígor', municipio.id
+   FROM municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO zona (nome, id_municipio)
+   SELECT 'Travessa Ladislau da Nóbrega', municipio.id
+   FROM municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO zona (nome, id_municipio)
+   SELECT 'Alameda Nathan da Fronteira', municipio.id
+   FROM municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO zona (nome, id_municipio)
+   SELECT 'Marginal Henrique Rios', municipio.id
+   FROM municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO zona (nome, id_municipio)
+   SELECT 'Alameda Maria Luiza', municipio.id
+   FROM municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO zona (nome, id_municipio)
+   SELECT 'Ponte Ana Lívia da Paz', municipio.id
+   FROM municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO zona (nome, id_municipio)
+   SELECT 'Travessa Ruan', municipio.id
+   FROM municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO zona (nome, id_municipio)
+   SELECT 'Viela Arthur Miguel da Gama', municipio.id
+   FROM municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO zona (nome, id_municipio)
+   SELECT 'Ponte José', municipio.id
+   FROM municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO zona (nome, id_municipio)
+   SELECT 'Marginal Valentina', municipio.id
+   FROM municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO zona (nome, id_municipio)
+   SELECT 'Rua Maria Clara Rolim', municipio.id
+   FROM municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO zona (nome, id_municipio)
+   SELECT 'Avenida Ofélia', municipio.id
+   FROM municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO zona (nome, id_municipio)
+   SELECT 'Rodovia Márcio', municipio.id
+   FROM municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO zona (nome, id_municipio)
+   SELECT 'Avenida Anthony', municipio.id
+   FROM municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO zona (nome, id_municipio)
+   SELECT 'Rodovia Noah', municipio.id
+   FROM municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT '706 Travessa João Lucas', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT 's/n Rodovia Nicolas Passarinho', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT '6642 Alameda Benjamin', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT '16854 Travessa Nicole', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT '2782 Avenida Vitor Hugo', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT '677 Rodovia Davi Lucas Gomes', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT '130 Ponte Lorraine', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT '9799 Marginal Kaique Videira', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT '403 Alameda Heloísa da Veiga', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT '632 Alameda Pérola', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT '693 Rodovia João Pedro Teixeira', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT '1920 Alameda João Vitor', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT '30660 Rua Laís', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT '408 Ponte Maria Valentina do Prado', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT '89266 Avenida Pérola', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT 's/n Alameda Ricardo', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT '32383 Viela Malu', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT '355 Avenida Davi Lucca Arantes', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT '138 Rua Lucas', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT '549 Marginal Murilo Godinho', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT 's/n Rodovia Luan', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT '8439 Ponte Ryan Porteira', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT 's/n Marginal Dalila', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT '4813 Avenida Matheus', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT '71168 Avenida Ana Cecília Martim', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT '515 Avenida Mariah', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT '9657 Avenida Lucas Gabriel Bouças', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT 's/n Travessa Vinicius', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT 's/n Marginal Maria Helena Melo', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO local (nome, id_zona)
+   SELECT '4800 Viela Luna Xavier', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'tnv4z3', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'k5gbz0', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'tu5i81', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'e285mu', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'bn701t', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 't6n189', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'wrxn9j', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'tp0rcg', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT '3z076u', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'kiq9ny', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'dkiukt', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT '5qg4kh', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'ipr8cq', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT '06ufbk', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'xlqfdi', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT '73e22m', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'jwv00s', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT '384mbk', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'w8m6dl', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT '19ynzc', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'kupkts', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'p95hey', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT '4psp1p', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT '3y2h95', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'reigcr', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'dplb6l', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'qn73ac', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'no05dk', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'el9t4m', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'zgv1f5', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'btsk86', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'jnyc0a', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT '4e3tmq', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT '0mm4je', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'p3md9b', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'ovq58z', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'oqkloa', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT '1svoqc', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'qtaaua', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO secao (nome, id_local)
+   SELECT 'i8b23m', local.id
+   FROM local
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'GO', 'Município de Rodrigo', '8068km2', estado.id
+   FROM estado
+   WHERE nome = 'Rio Grande do Norte'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Summer Creek', 151, 'Alameda Lorenzo Bouças', 81293437, 'Quadra 58', municipio.id
+   FROM municipio
+   WHERE nome = 'Município de Rodrigo'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'IE', 'Carvalheira do Descoberto', '97229km2', estado.id
+   FROM estado
+   WHERE nome = 'Sergipe'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Willow Heights', 901, 'Marginal Malu Grotas', 20858240, 'Sobrado 29', municipio.id
+   FROM municipio
+   WHERE nome = 'Carvalheira do Descoberto'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'JW', 'Moreira do Norte', '56756km2', estado.id
+   FROM estado
+   WHERE nome = 'Bahia'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Pine Acres', 382, 'Rua Giovanna', 69457598, 'Sobrado 67', municipio.id
+   FROM municipio
+   WHERE nome = 'Moreira do Norte'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'YJ', 'Nova Isabella do Descoberto', '90800km2', estado.id
+   FROM estado
+   WHERE nome = 'Roraima'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Autumn Gardens', 471, 'Avenida Rebeca', 69845438, 'Lote 48', municipio.id
+   FROM municipio
+   WHERE nome = 'Nova Isabella do Descoberto'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'EY', 'Vila Pedro Henrique', '84938km2', estado.id
+   FROM estado
+   WHERE nome = 'Pernambuco'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Summer Oaks', 681, 'Ponte Felícia Espinheira', 20797802, 'Lote 73', municipio.id
+   FROM municipio
+   WHERE nome = 'Vila Pedro Henrique'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'ZV', 'Vila João Miguel do Norte', '13948km2', estado.id
+   FROM estado
+   WHERE nome = 'Piauí'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Pine Square', 624, 'Viela Fernando', 15164099, 'Sobrado 89', municipio.id
+   FROM municipio
+   WHERE nome = 'Vila João Miguel do Norte'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'NT', 'Velha Ayla', '23826km2', estado.id
+   FROM estado
+   WHERE nome = 'Distrito Federal'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Autumn Pointe', 421, 'Rodovia Djalma Pinheira', 50108162, 'Sobrado 44', municipio.id
+   FROM municipio
+   WHERE nome = 'Velha Ayla'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'OE', 'Marins do Sul', '29890km2', estado.id
+   FROM estado
+   WHERE nome = 'Maranhão'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Summer Pointe', 422, 'Travessa Bárbara', 10120999, 'Sobrado 19', municipio.id
+   FROM municipio
+   WHERE nome = 'Marins do Sul'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'HJ', 'Velha Margarida do Sul', '77420km2', estado.id
+   FROM estado
+   WHERE nome = 'Roraima'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Pine Estates', 242, 'Avenida João Guilherme Aragão', 82779809, 'Quadra 30', municipio.id
+   FROM municipio
+   WHERE nome = 'Velha Margarida do Sul'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'HE', 'Marcondes do Norte', '70701km2', estado.id
+   FROM estado
+   WHERE nome = 'Espírito Santo'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Park Creek', 642, 'Marginal Alessandra', 44520608, 'Casa 3', municipio.id
+   FROM municipio
+   WHERE nome = 'Marcondes do Norte'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'JT', 'Vila Isaac', '85141km2', estado.id
+   FROM estado
+   WHERE nome = 'Rio de Janeiro'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Royal Heights', 626, 'Viela Francisco', 92352392, 'Lote 60', municipio.id
+   FROM municipio
+   WHERE nome = 'Vila Isaac'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'AD', 'Nova Maria do Norte', '67219km2', estado.id
+   FROM estado
+   WHERE nome = 'Tocantins'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'University Oaks', 793, 'Viela Eduardo da Costa', 45692686, 'Casa 5', municipio.id
+   FROM municipio
+   WHERE nome = 'Nova Maria do Norte'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'QV', 'Velha Breno de Nossa Senhora', '52402km2', estado.id
+   FROM estado
+   WHERE nome = 'Paraná'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Eagle Village', 829, 'Alameda Ana Vitória', 65179880, 'Quadra 31', municipio.id
+   FROM municipio
+   WHERE nome = 'Velha Breno de Nossa Senhora'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'VM', 'Maria Laura de Nossa Senhora', '77088km2', estado.id
+   FROM estado
+   WHERE nome = 'Espírito Santo'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Willow Gardens', 861, 'Travessa Eduarda', 75715901, 'Sobrado 83', municipio.id
+   FROM municipio
+   WHERE nome = 'Maria Laura de Nossa Senhora'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'FI', 'Quaresma do Norte', '58601km2', estado.id
+   FROM estado
+   WHERE nome = 'Rio Grande do Norte'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Autumn Heights', 522, 'Marginal Sara Menendes', 29243831, 'Lote 13', municipio.id
+   FROM municipio
+   WHERE nome = 'Quaresma do Norte'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'VT', 'Município de Ana Júlia', '10689km2', estado.id
+   FROM estado
+   WHERE nome = 'Paraná'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Willow Estates', 748, 'Ponte Mathias', 99243128, 'Sobrado 36', municipio.id
+   FROM municipio
+   WHERE nome = 'Município de Ana Júlia'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'RT', 'Município de Cauã', '76307km2', estado.id
+   FROM estado
+   WHERE nome = 'Bahia'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Eagle Crossing', 713, 'Viela Maitê', 74701527, 'Casa 5', municipio.id
+   FROM municipio
+   WHERE nome = 'Município de Cauã'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'TZ', 'Grande João Lucas do Norte', '24095km2', estado.id
+   FROM estado
+   WHERE nome = 'Roraima'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Pine Heights', 719, 'Viela Yasmin Costa', 64388907, 'Casa 8', municipio.id
+   FROM municipio
+   WHERE nome = 'Grande João Lucas do Norte'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'SY', 'Velha Kléber do Descoberto', '37237km2', estado.id
+   FROM estado
+   WHERE nome = 'Sergipe'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Eagle Court', 881, 'Alameda Igor Viana', 32743874, 'Casa 4', municipio.id
+   FROM municipio
+   WHERE nome = 'Velha Kléber do Descoberto'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'PR', 'Velha Isabella', '93249km2', estado.id
+   FROM estado
+   WHERE nome = 'Roraima'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Pine Place', 340, 'Avenida Ana Beatriz', 90261309, 'Lote 19', municipio.id
+   FROM municipio
+   WHERE nome = 'Velha Isabella'
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '93351719', 'Theo da Conceição', '1901-12-15', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '46819259', 'Sra. Nathan Teles', '1927-08-20', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '18871395', 'Bárbara Esteves', '1934-11-06', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '59240525', 'Gustavo Vieira Jr.', '1986-04-23', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '24742875', 'Dalila Lobos', '1940-01-12', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '75276743', 'Ana Luiza Assumpção', '1986-04-27', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '64763649', 'Suélen Tavares', '1960-05-31', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '71675187', 'Bernardo do Prado Neto', '1961-07-10', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '53833650', 'Sarah Guterres', '1962-06-30', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '26967622', 'Joana da Aldeia Neto', '1911-08-13', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '78283635', 'Maria Isis dos Reis Neto', '1995-07-13', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '84751455', 'Gúbio Saraiva', '1908-09-19', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '53419742', 'Davi Batista', '1912-12-15', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '78054919', 'Dra. Davi Lucca Carvalheira', '1953-01-24', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '66713173', 'Pietra Campos Jr.', '1933-06-10', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '36167567', 'Talita Costa Filho', '1932-12-05', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '25284966', 'Sra. Murilo Corte', '1954-12-04', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '94441634', 'Guilherme Assumpção', '1956-06-17', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '55934038', 'Fabiano Antena', '1901-03-08', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '16726485', 'Ana Luiza Lima', '1982-04-24', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '33375229', 'Erick Meira', '1928-10-01', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '45908625', 'Hélio Passarinho', '1916-03-09', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '53638033', 'Maria Sophia Bernardes', '1992-02-01', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '97908827', 'Elisa Pedroso', '1946-04-05', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '27626448', 'Francisco Menendes', '1933-04-06', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '65508193', 'Fernando Amoreira', '1936-11-15', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '36172285', 'Calebe Gomide Filho', '1917-11-18', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '57531552', 'Levi Costa', '1913-03-01', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '82227057', 'Luiz Caldeira', '1999-06-12', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '25805088', 'Pérola da Conceição', '1925-02-25', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '85980741', 'Sirineu Taveira', '1925-09-10', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '28388185', 'Bruno da Nóbrega', '1974-08-18', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '63879157', 'Luiz Miguel Álvares', '1944-10-17', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '47965387', 'Bernardo da Fronteira', '1956-06-05', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '43522536', 'Ana Luiza Barros Neto', '1907-03-18', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '95681605', 'Davi Lucca Aguiar', '1990-12-23', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '78256389', 'Sr. Guilherme Ambrósio', '1968-04-25', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '45624122', 'Felícia Ambrósio', '1978-02-02', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '11087407', 'Pedro Lessa', '1904-07-11', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '40905165', 'Mirella Espinheira Filho', '1971-10-20', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '28281737', 'Enzo Miguel da Barra Filho', '1900-12-19', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '44577636', 'Fernando Resende', '1905-04-14', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '3050343', 'Heitor Campos', '1938-05-15', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '37132580', 'Ian da Costa', '2000-04-06', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '55003543', 'Félix Paiva', '1934-08-04', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '42461114', 'Gustavo Bittencourt Jr.', '1968-08-22', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '50488684', 'Liz Lopes', '1915-07-18', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '35118994', 'Joaquim da Cruz', '1964-10-10', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '50513879', 'Maria Luiza Cardoso', '1980-05-11', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '89332570', 'Sr. Luiz Gustavo Cruz', '1944-02-12', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
    LIMIT 1;
 
