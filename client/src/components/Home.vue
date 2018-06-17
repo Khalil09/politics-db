@@ -9,7 +9,7 @@
         <b-col cols="8">
           <br/>
           <br/>
-          <dbTable></dbTable>
+          <dbTable v-bind:dt="items"></dbTable>
         </b-col>
         <b-col></b-col>
       </b-row>
@@ -20,7 +20,7 @@
 <script>
 import Navbar from '@/components/navbar.vue'
 import TableList from '@/components/TableList.vue'
-import DBTable from '@/components/dbtable.vue'
+import DBTable from '@/components/DBTable.vue'
 
 export default {
   name: 'Home',
