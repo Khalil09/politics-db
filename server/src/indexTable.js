@@ -7,6 +7,16 @@ module.exports = {
         if (err) throw err;
         res.json(row);
       });
-    }, true)
+    }, true);
+  },
+  show: function(req, res){
+    connectDB.makeConnection((con) => {
+      con.query("select * from " + req.param("table") + 
+          " where id = " + req.param("id"), 
+      (err, row) => {
+        if (err) throw err;
+        res.json(row);
+      });
+    }, true);
   }
 }

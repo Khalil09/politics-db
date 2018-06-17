@@ -18,4 +18,8 @@ app.get('/api/:table', (req, res) => {
   indexTable.getAll(req, res);
 })
 
+app.get('/api/:table/:id', (req, res) => {
+  indexTable.show(req, res);
+})
+
 app.listen(process.env.PORT || 8081)
