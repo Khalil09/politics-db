@@ -1304,9 +1304,6 @@ INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_e
    ORDER BY rand()
    LIMIT 1;
 
-<<<<<<< Updated upstream
-=======
-
 INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
    SELECT '12008270', 'Emanuel Rêgo', '1909-10-02', 'homem', secao.id, endereco.cep, endereco.id
    FROM secao, endereco, zona, local
