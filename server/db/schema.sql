@@ -52,7 +52,7 @@ CREATE TABLE urna (
 
 CREATE TABLE estado (
     nome VARCHAR(100),
-    area VARCHAR(10),
+    area VARCHAR(20),
     regiao VARCHAR(100),
     sigla VARCHAR(10),
     id INTEGER PRIMARY KEY

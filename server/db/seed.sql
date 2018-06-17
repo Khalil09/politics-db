@@ -1,6 +1,6 @@
 INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Acre", "152,581km2", "Norte", "AC", 12);
 INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Rondônia", "237,576km2", "Norte", "RO", 11);
-INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Amazonas", "1571000km2", "Norte", "AM", 13);
+INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Amazonas", "1,571,000km2", "Norte", "AM", 13);
 INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Roraima", "224,299km2", "Norte", "RR", 14);
 INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Pará", "1,247,954km2", "Norte", "PA", 15);
 INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Amapá", "142,828km2", "Norte", "AP", 16);
@@ -26,16 +26,123 @@ INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Mato Grosso", "903,3
 INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Goiás", "340,111km2", "Sul", "GO", 52);
 INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Distrito Federal", "5,780km2", "Sul", "DF", 53);
 
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'DX', 'Município de Antônio de Nossa Senhora', '17214km2', estado.id
+   FROM estado
+   WHERE nome = 'São Paulo'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'University Oaks', 284, 'Rua Frederico', 78031099, 'Lote 80', municipio.id
+   FROM municipio
+   WHERE nome = 'Município de Antônio de Nossa Senhora'
+   LIMIT 1;
 
 INSERT INTO municipio (sigla, nome, area, id_estado)
- SELECT PK, Velha Ana Luiza, 24064, estado.id
- FROM estado
- WHERE nome = Acre
- LIMIT 1;
+   SELECT 'UP', 'Talita do Descoberto', '64367km2', estado.id
+   FROM estado
+   WHERE nome = 'Tocantins'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Park Heights', 568, 'Viela Nicole', 29885594, 'Sobrado 21', municipio.id
+   FROM municipio
+   WHERE nome = 'Talita do Descoberto'
+   LIMIT 1;
 
 INSERT INTO municipio (sigla, nome, area, id_estado)
- SELECT PK, Velha Ana Luiza, 24064, estado.id
- FROM estado
- WHERE nome = Acre
- LIMIT 1;
+   SELECT 'IX', 'Marcondes do Sul', '90724km2', estado.id
+   FROM estado
+   WHERE nome = 'Espírito Santo'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Paradise Square', 894, 'Marginal Allana', 23478619, 'Apto. 997', municipio.id
+   FROM municipio
+   WHERE nome = 'Marcondes do Sul'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'JQ', 'Freitas do Sul', '28239km2', estado.id
+   FROM estado
+   WHERE nome = 'Maranhão'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Summer Court', 584, 'Rodovia Maria Helena Mendes', 47698405, 'Apto. 850', municipio.id
+   FROM municipio
+   WHERE nome = 'Freitas do Sul'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'GV', 'Mércia do Descoberto', '44432km2', estado.id
+   FROM estado
+   WHERE nome = 'Alagoas'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Royal Court', 355, 'Rua Maria Sophia', 89881221, 'Apto. 588', municipio.id
+   FROM municipio
+   WHERE nome = 'Mércia do Descoberto'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'EX', 'Fábio do Sul', '19895km2', estado.id
+   FROM estado
+   WHERE nome = 'Rio Grande do Norte'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Pine Crossing', 368, 'Rua Gael Simão', 17506085, 'Lote 17', municipio.id
+   FROM municipio
+   WHERE nome = 'Fábio do Sul'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'GI', 'Município de Ryan', '74224km2', estado.id
+   FROM estado
+   WHERE nome = 'Distrito Federal'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Park Place', 614, 'Rua Danilo Corte', 34044446, 'Lote 88', municipio.id
+   FROM municipio
+   WHERE nome = 'Município de Ryan'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'UX', 'Nova Joana', '81412km2', estado.id
+   FROM estado
+   WHERE nome = 'Mato Grosso'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Eagle Acres', 231, 'Alameda Maria Flor Leiria', 48344325, 'Casa 8', municipio.id
+   FROM municipio
+   WHERE nome = 'Nova Joana'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'DL', 'Veloso do Sul', '51240km2', estado.id
+   FROM estado
+   WHERE nome = 'Paraná'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'Park Acres', 506, 'Viela Margarida', 58729327, 'Apto. 115', municipio.id
+   FROM municipio
+   WHERE nome = 'Veloso do Sul'
+   LIMIT 1;
+
+INSERT INTO municipio (sigla, nome, area, id_estado)
+   SELECT 'QO', 'Velha Natália', '88579km2', estado.id
+   FROM estado
+   WHERE nome = 'Rio Grande do Sul'
+   LIMIT 1;
+
+INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT 'University Heights', 17, 'Rua Pietro', 77507426, 'Sobrado 15', municipio.id
+   FROM municipio
+   WHERE nome = 'Velha Natália'
+   LIMIT 1;
 
