@@ -6,9 +6,14 @@ require 'byebug'
 Faker::Config.locale = :"pt-BR"
 
 seed_name = 'seed.sql'
-$house_nums = Array(1..1000)
 
 puts "Creating #{ARGV[1]} for table #{ARGV[0]}"
+
+def rand_alphanum(length)
+  (0..length).map{ rand(36).to_s(36) }.join
+end
+
+$house_nums = Array(1..1000)
 
 
 def mun_insert(name = nil) 
@@ -22,9 +27,49 @@ def mun_insert(name = nil)
 end
 
 def addr_insert
-  name ||= Faker::Address.city
+  name = Faker::Address.city
   mun_insert(name) +
   "INSERT INTO endereco (bairro, id, rua, cep, complemento, id_municipio)
+   SELECT '#{Faker::Address.community}', #{$house_nums.delete($house_nums.sample)}, '#{Faker::Address.street_name}', #{Integer(Faker::Address.zip.tr('-', ''))}, '#{Faker::Address.secondary_address}', municipio.id
+   FROM municipio
+   WHERE nome = '#{name}'
+   LIMIT 1;\n\n"
+end
+
+def zona_rand_insert
+  "INSERT INTO zona (nome, id_municipio)
+   SELECT '#{Faker::Address.street_name}', municipio.id
+   FROM municipio
+   ORDER BY rand()
+   LIMIT 1;\n\n"
+end
+
+def local_rand_insert
+  "INSERT INTO local (nome, id_zona)
+   SELECT '#{Faker::Address.street_address}', zona.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;\n\n"
+end
+
+def secao_rand_insert
+  "INSERT INTO secao (nome, id_local)
+   SELECT '#{rand_alphanum(5)}', local.id
+   FROM zona
+   ORDER BY rand()
+   LIMIT 1;\n\n"
+end
+
+def urna_rand_insert
+  "INSERT INTO secao (id_secao)
+   SELECT secao.id
+   FROM secao
+   ORDER BY rand()
+   LIMIT 1;\n\n"
+end
+
+def eleitor_insert
+  "INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao)
    SELECT '#{Faker::Address.community}', #{$house_nums.delete($house_nums.sample)}, '#{Faker::Address.street_name}', #{Integer(Faker::Address.zip.tr('-', ''))}, '#{Faker::Address.secondary_address}', municipio.id
    FROM municipio
    WHERE nome = '#{name}'

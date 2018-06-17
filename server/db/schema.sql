@@ -1,7 +1,7 @@
 CREATE TABLE local (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100),
-    id_local INTEGER
+    id_zona INTEGER
 );
 
 CREATE TABLE municipio (
@@ -15,7 +15,7 @@ CREATE TABLE municipio (
 CREATE TABLE partido (
     nome VARCHAR(100),
     id INTEGER PRIMARY KEY,
-    dt_criacao DATETIME,
+    dt_criacao DATE,
     sigla VARCHAR(10)
 );
 
@@ -46,7 +46,7 @@ CREATE TABLE voto (
 );
 
 CREATE TABLE urna (
-    id INTEGER PRIMARY KEY,
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
     id_secao INTEGER
 );
 
@@ -118,13 +118,16 @@ CREATE TABLE eleitor (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     titulo_eleitor BIGINT(20),
     nome VARCHAR(100),
-    data_de_nasc DATETIME,
+    data_de_nasc DATE,
     genero VARCHAR(50),
     id_secao INTEGER,
-    FOREIGN KEY(id_secao) REFERENCES secao (id)
+    cep_endereco INTEGER,
+    id_endereco INTEGER,
+    FOREIGN KEY(id_secao) REFERENCES secao (id),
+    FOREIGN KEY(id_endereco, cep_endereco) REFERENCES endereco (id, cep)
 );
 
-ALTER TABLE local ADD FOREIGN KEY(id_local) REFERENCES zona (id);
+ALTER TABLE local ADD FOREIGN KEY(id_zona) REFERENCES zona (id);
 ALTER TABLE municipio ADD FOREIGN KEY(id_estado) REFERENCES estado (id);
 ALTER TABLE candidato ADD FOREIGN KEY(id_pessoa) REFERENCES eleitor (id);
 ALTER TABLE candidato ADD FOREIGN KEY(id_cargo) REFERENCES cargo (id);

@@ -1,3 +1,31 @@
+INSERT INTO partido (nome, id, dt_criacao, sigla) 
+    VALUES ('Movimento Democrático Brasileiro', 15, '1965-23-04', 'MDB');
+INSERT INTO partido (nome, id, dt_criacao, sigla) 
+    VALUES ('Partido dos Trabalhadores', 13, '1980-02-10', 'PR');
+INSERT INTO partido (nome, id, dt_criacao, sigla) 
+    VALUES ('Partido da Social Democracia Brasileira', 45, '1988-06-25', 'PSDB');
+INSERT INTO partido (nome, id, dt_criacao, sigla) 
+    VALUES ('Partido Progressista', 11, '1995-08-08', 'PP');
+INSERT INTO partido (nome, id, dt_criacao, sigla) 
+    VALUES ('Partido Democrático Trabalhista', 12, '1979-06-17', 'PDT');
+INSERT INTO partido (nome, id, dt_criacao, sigla) 
+    VALUES ('Partido Trabalhista Brasileiro', 14, '1945-05-15', 'PTB');
+INSERT INTO partido (nome, id, dt_criacao, sigla) 
+    VALUES ('Democratas', 25, '1985-01-24', 'DEM');
+INSERT INTO partido (nome, id, dt_criacao, sigla) 
+    VALUES ( 'Partido da República', 22, '2006-10-26', 'PR');
+INSERT INTO partido (nome, id, dt_criacao, sigla) 
+    VALUES ('Partido Socialista Brasileiro', 40, '1947-04-02', 'PSB');
+INSERT INTO partido (nome, id, dt_criacao, sigla) 
+    VALUES ( 'Partido Popular Socialista', 23, '1992-01-26', 'PPS');
+
+INSERT INTO cargo (nome) VALUES ('Presidente');
+INSERT INTO cargo (nome) VALUES ('Vice-presidente');
+INSERT INTO cargo (nome) VALUES ('Senador');
+INSERT INTO cargo (nome) VALUES ('Deputado Distrital');
+INSERT INTO cargo (nome) VALUES ('Deputado Federal');
+INSERT INTO cargo (nome) VALUES ('Governador');
+
 INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Acre", "152,581km2", "Norte", "AC", 12);
 INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Rondônia", "237,576km2", "Norte", "RO", 11);
 INSERT INTO estado (nome, area, regiao, sigla, id) VALUES ("Amazonas", "1,571,000km2", "Norte", "AM", 13);
