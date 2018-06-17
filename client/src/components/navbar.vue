@@ -1,12 +1,11 @@
 <template>
-  <b-navbar toggleable="md" type="dark" variant="secondary">
+  <b-navbar class="test" toggleable="md" type="dark" variant="secondary" sticky=True>
     <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-    <b-navbar-brand v-bind:to="'/'">NavBar</b-navbar-brand>
+    <b-navbar-brand v-bind:to="'/'">EVO</b-navbar-brand>
 
     <b-collapse is-nav id="nav_collapse">
 
       <b-navbar-nav>
-        <b-nav-item v-bind:to="'/posts'">Posts</b-nav-item>
         <b-nav-item v-bind:to="'/about'">About Us</b-nav-item>
       </b-navbar-nav>
         <!-- Right aligned nav items -->
@@ -32,6 +31,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'navbar',
   data () {

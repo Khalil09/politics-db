@@ -36,6 +36,7 @@ export default {
 */
 .wrapper {
   position: relative;
+  padding-bottom: 40px;
 }
 
 /*
@@ -56,6 +57,7 @@ export default {
   position: absolute;
   top: 0;
   right: 0;
+
 
   /*
   *  Styling only, the below can be changed or removed
