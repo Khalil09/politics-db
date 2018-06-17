@@ -11,7 +11,7 @@ readConfig.read((config) => {
     "database": config.config_database.database
   });
 
-  importer.importSQL('db/schema.sql').then( () => {
+  importer.importSQL('db/seed.sql').then( () => {
     console.log('\x1b[32m%s\x1b[0m', '-> All statements have been executed');
   }).catch( err => {
     console.log(`-> error: ${err}`);
