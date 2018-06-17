@@ -55,7 +55,7 @@ end
 def secao_rand_insert
   "INSERT INTO secao (nome, id_local)
    SELECT '#{rand_alphanum(5)}', local.id
-   FROM zona
+   FROM local
    ORDER BY rand()
    LIMIT 1;\n\n"
 end
@@ -69,16 +69,19 @@ def urna_rand_insert
 end
 
 def eleitor_insert
-  "INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao)
-   SELECT '#{Faker::Address.community}', #{$house_nums.delete($house_nums.sample)}, '#{Faker::Address.street_name}', #{Integer(Faker::Address.zip.tr('-', ''))}, '#{Faker::Address.secondary_address}', municipio.id
-   FROM municipio
-   WHERE nome = '#{name}'
+  generos = ['homem', 'mulher']
+  "INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '#{rand(99999999)}', '#{Faker::Name.name}', '#{Faker::Date.birthday(18, 120).to_s}', '#{generos.sample}', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
    LIMIT 1;\n\n"
 end
 
-sqlinsert = { 
-  'municipio' => :mun_insert, 
-  'endereco' => :addr_insert
+sqlinsert = {
+  'secao' => :secao_rand_insert,
+  'urna' => :urna_rand_insert,
+  'eleitor' => :eleitor_insert
 }
 
 File.open(seed_name, 'a') do |file|

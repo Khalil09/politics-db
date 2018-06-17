@@ -79,7 +79,7 @@ CREATE TABLE endereco (
 
 CREATE TABLE zona (
     nome VARCHAR(100),
-    id INTEGER PRIMARY KEY,
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
     id_municipio INTEGER,
     FOREIGN KEY(id_municipio) REFERENCES municipio (id) ON DELETE CASCADE
 );
