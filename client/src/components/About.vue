@@ -48,7 +48,6 @@ export default {
   height: 40px;
 }
 
-
 /*
 *  Position the #infoi element in the top-right
 *  of the .wrapper element
@@ -57,8 +56,6 @@ export default {
   position: absolute;
   top: 0;
   right: 0;
-
-
   /*
   *  Styling only, the below can be changed or removed
   *  depending on your use case

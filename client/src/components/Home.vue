@@ -3,15 +3,15 @@
     <navbar></navbar>
     <b-container fluid>
       <b-row>
-        <b-col class="noPadding">
+        <b-col cols="2">
+          <br/>
           <TableList></TableList>
         </b-col>
-        <b-col cols="8">
+        <b-col cols="10">
           <br/>
-          <br/>
-          <dbTable></dbTable>
+          <dbTable v-bind:dt="items"></dbTable>
         </b-col>
-        <b-col></b-col>
+        <b-col cols="2"></b-col>
       </b-row>
     </b-container>
   </div>
@@ -20,7 +20,7 @@
 <script>
 import Navbar from '@/components/navbar.vue'
 import TableList from '@/components/TableList.vue'
-import DBTable from '@/components/dbtable.vue'
+import DBTable from '@/components/DBTable.vue'
 
 export default {
   name: 'Home',
@@ -44,7 +44,5 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-.noPadding {
-  padding-left: 0px;
-}
+
 </style>
