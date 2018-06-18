@@ -52,12 +52,6 @@
       </nav>
     </nav>
   </div>
-
-  <!-- <div class="container-fluid bg">
-    <div class="row flex-xl-nowrap2">
-
-    </div>
-  </div> -->
 </template>
 
 <script>
@@ -82,10 +76,6 @@ export default {
 li {
 display: list-item;
 text-align: -webkit-match-parent;
-}
-
-.bd-toc-item.active>.bd-toc-link {
-color: rgba(0,0,0,.85);
 }
 
 .bd-links {
@@ -120,24 +110,7 @@ color: rgba(0,0,0,.85);
   order: 0;
   border-bottom: 1px solid rgba(0,0,0,.1);
   background-color: white;
-}
-
-.bd-search {
-  position: relative;
-  padding: 16px 15px;
-  padding: 1rem 15px;
-  margin-right: -15px;
-  margin-left: -15px;
-  border-bottom: 1px solid rgba(0,0,0,.05);
-}
-
-.bd-links {
-  padding-top: 16px;
-  padding-top: 1rem;
-  padding-bottom: 16px;
-  padding-bottom: 1rem;
-  margin-right: -15px;
-  margin-left: -15px;
+  height: 100%;
 }
 
 .navbar-collapse {
@@ -149,20 +122,5 @@ color: rgba(0,0,0,.85);
   align-items: center;
 }
 
-.form-control {
-  display: block;
-  width: 100%;
-  padding: 6px 12px;
-  padding: .375rem .75rem;
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
 
 </style>

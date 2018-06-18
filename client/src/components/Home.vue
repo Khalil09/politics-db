@@ -3,10 +3,11 @@
     <navbar></navbar>
     <b-container fluid>
       <b-row>
-        <b-col cols="2" class="noPadding">
+        <b-col cols="2">
+          <br/>
           <TableList></TableList>
         </b-col>
-        <b-col cols="8">
+        <b-col cols="10">
           <br/>
           <dbTable v-bind:dt="items"></dbTable>
         </b-col>
@@ -43,7 +44,5 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-.noPadding {
-  padding-left: 0px;
-}
+
 </style>
