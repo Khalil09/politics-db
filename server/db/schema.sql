@@ -1,33 +1,33 @@
 CREATE TABLE local (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(100),
+    nome VARCHAR(100) NOT NULL,
     id_zona INTEGER
 );
 
 CREATE TABLE municipio (
-    sigla VARCHAR(10),
-    nome VARCHAR(100),
+    sigla VARCHAR(10) NOT NULL,
+    nome VARCHAR(100) NOT NULL,
     area VARCHAR(10),
     id_estado INTEGER,
     id INTEGER PRIMARY KEY AUTO_INCREMENT
 );
 
 CREATE TABLE partido (
-    nome VARCHAR(100),
+    nome VARCHAR(100) NOT NULL,
     id INTEGER PRIMARY KEY,
     dt_criacao DATE,
     sigla VARCHAR(10)
 );
 
 CREATE TABLE chapa (
-    nome VARCHAR(100),
+    nome VARCHAR(100) NOT NULL,
     id INTEGER PRIMARY KEY AUTO_INCREMENT
 );
 
 CREATE TABLE candidato (
     foto BLOB,
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
-    id_pessoa INTEGER,
+    id_pessoa INTEGER NOT NULL,
     id_partido INTEGER,
     id_cargo INTEGER,
     id_chapa INTEGER,
@@ -51,10 +51,10 @@ CREATE TABLE urna (
 );
 
 CREATE TABLE estado (
-    nome VARCHAR(100),
+    nome VARCHAR(100) NOT NULL,
     area VARCHAR(20),
-    regiao VARCHAR(100),
-    sigla VARCHAR(10),
+    regiao VARCHAR(100) NOT NULL,
+    sigla VARCHAR(10) NOT NULL,
     id INTEGER PRIMARY KEY
 );
 
@@ -85,7 +85,7 @@ CREATE TABLE zona (
 );
 
 CREATE TABLE cargo (
-    nome VARCHAR(100),
+    nome VARCHAR(100) NOT NULL,
     id INTEGER PRIMARY KEY AUTO_INCREMENT
 );
 
@@ -98,7 +98,7 @@ CREATE TABLE secao (
 
 CREATE TABLE doacao (
     data DATETIME,
-    valor DECIMAL(12,2),
+    valor DECIMAL(12,2) NOT NULL,
     id INTEGER PRIMARY KEY,
     id_empresa INTEGER,
     id_partido INTEGER,
@@ -116,8 +116,8 @@ CREATE TABLE mesario (
 
 CREATE TABLE eleitor (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
-    titulo_eleitor BIGINT(20),
-    nome VARCHAR(100),
+    titulo_eleitor BIGINT(20) NOT NULL,
+    nome VARCHAR(100) NOT NULL,
     data_de_nasc DATE,
     genero VARCHAR(50),
     id_secao INTEGER,
@@ -129,7 +129,7 @@ CREATE TABLE eleitor (
 
 ALTER TABLE local ADD FOREIGN KEY(id_zona) REFERENCES zona (id);
 ALTER TABLE municipio ADD FOREIGN KEY(id_estado) REFERENCES estado (id);
-ALTER TABLE candidato ADD FOREIGN KEY(id_pessoa) REFERENCES eleitor (id);
+ALTER TABLE candidato ADD FOREIGN KEY(id_pessoa) REFERENCES eleitor (id) ON DELETE SET NULL;
 ALTER TABLE candidato ADD FOREIGN KEY(id_cargo) REFERENCES cargo (id);
 ALTER TABLE voto ADD FOREIGN KEY(id_eleitor) REFERENCES eleitor (id);
 ALTER TABLE voto ADD FOREIGN KEY(id_urna) REFERENCES urna (id);
