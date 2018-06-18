@@ -92,5 +92,22 @@ module.exports = {
         res.json({"message": "Atualizado com sucesso"});
       });
     }, true)
+  },
+
+  checkSecao: function(req, res){
+    connectDB.makeConnection((con) => {
+      var q = "call checkSecao(" + req.param("titulo_eleitor") + ")";
+
+      con.query(q, (err, row) => {
+        if (err){
+          res.status(400);
+          res.json({"error": "Não foi possível executar a checagem"})
+          throw err;
+        }
+        res.status(200)
+        res.json(row);
+      });
+    }, true)
   }
+
 }

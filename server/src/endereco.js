@@ -54,10 +54,10 @@ module.exports = {
 
   updateEndereco: function(req, res){
     var q = "UPDATE endereco SET " +
-          "bairro = \"" + req.body.bairro + "\" " +
-          "rua = \"" + req.body.bairro + "\" " +
-          "complemento = \"" + req.body.bairro + "\" " +
-          "id_municipio = \"" + req.body.bairro + "\" " +
+          "bairro = \"" + req.body.bairro + "\", " +
+          "rua = \"" + req.body.rua + "\", " +
+          "complemento = \"" + req.body.complemento + "\", " +
+          "id_municipio = \"" + req.body.id_municipio + "\" " +
           "WHERE id = " + req.param("id");
 
     connectDB.makeConnection((con) => {
