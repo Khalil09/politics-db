@@ -56,6 +56,8 @@
 </template>
 
 <script>
+import TablesService from '@/services/TablesService'
+
 export default {
   name: 'DBTable',
   components: {},
@@ -87,9 +89,14 @@ export default {
       this.modalInfo.content = JSON.stringify(item, null, 2)
       this.$root.$emit('bv::show::modal', 'modalInfo', button)
     },
-    removeItem (item, index, button) {
-      // TODO: activate API to delete this item
-      location.reload()
+    async removeItem (item, index, button) {
+      const response = await TablesService.removeTableData(this.table, item.id)s
+
+      if(response.error){
+        console.log(response.error)
+      } else {
+        location.reload()
+      }
     },
     resetModal () {
       this.modalInfo.title = ''
