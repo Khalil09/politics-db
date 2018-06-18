@@ -62,11 +62,7 @@ module.exports = {
           res.json({"error": "Erro ao deletar o eleitor"})
         }
         res.status(200)
-        if(row.affectedRows == 0){
-          res.json({"message": "Não existe tal eleitor"});
-        } else {
-          res.json({"message": "Deletado com sucesso"});
-        }
+        res.json({"message": "Deletado com sucesso"});
       });
     }, true)
   },
