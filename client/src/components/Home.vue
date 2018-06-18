@@ -48,9 +48,11 @@ export default {
   methods: {
     async getTables (){
       const response = await TablesService.fetchTables()
+      
       if(response.error){
-
+        console.log(response.error)
       }
+
       this.tables = response.data
     },
     async getTable (){
