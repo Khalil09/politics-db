@@ -113,12 +113,13 @@ export default {
     },
     async removeItem (item, index, button) {
       let response = {}
+
       if(this.table == 'voto'){
         response = await TablesService.removeVoto(item.id_eleitor, item.id_candidato)
       } else {
         response = await TablesService.removeTableData(this.table, item.id)
       }
-      console.log(response)
+      
       if(response.error){
         console.log(response.error)
       } else {
