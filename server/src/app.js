@@ -40,6 +40,11 @@ app.delete('/api/eleitor/:id', (req, res) => {
 
 app.post('/api/eleitor/update/:id', (req, res) => {
   eleitor.updateEleitor(req, res);
+})
+
+app.get('/api/eleitor/checkSecao/:titulo_eleitor', (req, res) => {
+  eleitor.checkSecao(req, res);
+})
 
 app.post('/api/voto/new', (req, res) => {
   voto.createVoto(req, res);
