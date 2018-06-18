@@ -3,8 +3,9 @@
     <nav id="bd-docs-nav" class="bd-links navbar-collapse collapse show" style="">
       <nav class="bd-links navbar-collapse collapse show" id="bd-docs-nav" style="">
         <div v-for="table in tables" class="bd-toc-item">
-          <a href="/" class="bd-toc-link nuxt-link-active">{{table.Tables_in_politics_db}}</a>
-          <ul class="bd-sidenav nav"></ul>
+          <a href="/docs/" class="bd-toc-link nuxt-link-active">{{table.Tables_in_politics_db}}</a>
+          <ul class="bd-sidenav nav">
+          </ul>
         </div>
       </nav>
     </nav>
@@ -12,26 +13,24 @@
 </template>
 
 <script>
-import axios from 'axios'
+import TablesService from '@/services/TablesService'
 
 export default {
   name: 'TableList',
-  data () {
+  data() {
     return {
-      tables: null
+      tables: []
     }
   },
-  mounted () {
-    console.log('as')
-    axios
-      .get('http://localhost:8081/api/tables')
-      .then(res => {
-        console.log(res)
-        this.tables = res
-      })
-      .catch()
+  mounted() {
+    this.getTables()
   },
-  components: {}
+  methods: {
+    async getTables(){
+      const response = await TablesService.fetchTables()
+      this.tables = response.data
+    }
+  }
 }
 </script>
 
