@@ -24,15 +24,15 @@
         <b-btn v-if="isEleitor" v-b-modal.eleitor>Add Eleitor</b-btn>
 
         <b-modal id="voto" title="Add">
-          <p class="my-4">Hello from modal!</p>
+          <addVoto></addVoto>
         </b-modal>
 
         <b-modal id="endereco" title="Add">
-          <p class="my-4">Hello from modal!</p>
+          <addEndereco></addEndereco>
         </b-modal>
 
         <b-modal id="eleitor" title="Add">
-          <p class="my-4">Hello from modal!</p>
+          <addEleitor></addEleitor>
         </b-modal>
       </b-col>
     </b-row>
@@ -76,10 +76,18 @@
 
 <script>
 import TablesService from '@/services/TablesService'
+import AddEleitor from '@/components/Eleitor/Add.vue'
+import AddEndereco from '@/components/Endereco/Add.vue'
+import AddVoto from '@/components/Voto/Add.vue'
 
 export default {
   name: 'DBTable',
   components: {},
+  components: {
+    'addEleitor': AddEleitor,
+    'addEndereco': AddEndereco,
+    'addVoto': AddVoto
+  },
   props: {
     dt: {
       type: Array
@@ -119,7 +127,7 @@ export default {
       } else {
         response = await TablesService.removeTableData(this.table, item.id)
       }
-      
+
       if(response.error){
         console.log(response.error)
       } else {
