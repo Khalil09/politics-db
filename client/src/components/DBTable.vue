@@ -63,12 +63,10 @@ export default {
   components: {},
   props: {
     dt: {
-      type: Array,
-      required: true
+      type: Array
     },
     table: {
-      type: String,
-      required: true
+      type: String
     }
   },
   data () {
@@ -90,7 +88,7 @@ export default {
       this.$root.$emit('bv::show::modal', 'modalInfo', button)
     },
     async removeItem (item, index, button) {
-      const response = await TablesService.removeTableData(this.table, item.id)s
+      const response = await TablesService.removeTableData(this.table, item.id)
 
       if(response.error){
         console.log(response.error)
