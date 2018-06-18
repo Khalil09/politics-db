@@ -2,6 +2,7 @@
   <div>
     <navbar></navbar>
     <b-container fluid>
+      <ParticlesJS></ParticlesJS>
       <b-row>
         <b-col cols="2">
           <br/>
@@ -19,6 +20,7 @@
 
 <script>
 import Navbar from '@/components/navbar.vue'
+import ParticlesJS from '@/components/Particles'
 import TableList from '@/components/TableList.vue'
 import DBTable from '@/components/DBTable.vue'
 
@@ -26,6 +28,7 @@ export default {
   name: 'Home',
   components: {
     'navbar': Navbar,
+    'ParticlesJS': ParticlesJS,
     'TableList': TableList,
     'dbTable': DBTable
   },
