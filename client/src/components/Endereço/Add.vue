@@ -2,7 +2,7 @@
   <div>
     <b-form @submit="onSubmit">
       <b-form-group id="bairro" label="Bairro:" label-for="bairroInput">
-        <b-form-input id="bairroInput" type="number" v-model="form.bairro">
+        <b-form-input id="bairroInput" type="text" v-model="form.bairro">
         </b-form-input>
       </b-form-group>
       <b-form-group id="rua" label="Rua:" label-for="ruaInput">
@@ -14,7 +14,7 @@
         </b-form-input>
       </b-form-group>
       <b-form-group id="complemento" label="Complemento:" label-for="complementoInput">
-        <b-form-input id="complementoInput" type="number" v-model="form.complemento">
+        <b-form-input id="complementoInput" type="text" v-model="form.complemento">
         </b-form-input>
       </b-form-group>
       <b-form-group id="id_municipio" label="Id Municipio:" label-for="id_municipioInput">

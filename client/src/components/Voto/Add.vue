@@ -1,32 +1,16 @@
 <template>
   <div>
     <b-form @submit="onSubmit">
-      <b-form-group id="bairro" label="Bairro:" label-for="bairroInput">
-        <b-form-input id="bairroInput" type="number" v-model="form.bairro">
+      <b-form-group id="id_eleitor" label="Id Secao:" label-for="id_secaoInput">
+        <b-form-input id="id_eleitorInput" type="number" v-model="form.id_secao">
         </b-form-input>
       </b-form-group>
-      <b-form-group id="rua" label="Rua:" label-for="ruaInput">
-        <b-form-input id="ruaInput" type="number" v-model="form.rua">
+      <b-form-group id="id_candidato" label="Id Candidato:" label-for="idInput">
+        <b-form-input id="id_candidatoInput" type="number" v-model="form.id">
         </b-form-input>
       </b-form-group>
-      <b-form-group id="cep" label="CEP:" label-for="cepInput">
-        <b-form-input id="cepInput" type="number" v-model="form.cep">
-        </b-form-input>
-      </b-form-group>
-      <b-form-group id="complemento" label="Complemento:" label-for="complementoInput">
-        <b-form-input id="complementoInput" type="number" v-model="form.complemento">
-        </b-form-input>
-      </b-form-group>
-      <b-form-group id="id_municipio" label="Id Municipio:" label-for="id_municipioInput">
-        <b-form-input id="id_municipioInput" type="number" v-model="form.id_municipio">
-        </b-form-input>
-      </b-form-group>
-      <b-form-group id="id_secao" label="Id Secao:" label-for="id_secaoInput">
-        <b-form-input id="id_secaoInput" type="number" v-model="form.id_secao">
-        </b-form-input>
-      </b-form-group>
-      <b-form-group id="id" label="Número:" label-for="idInput">
-        <b-form-input id="idInput" type="number" v-model="form.id">
+      <b-form-group id="id_urna" label="Id Urna:" label-for="idInput">
+        <b-form-input id="id_candidatoInput" type="number" v-model="form.id">
         </b-form-input>
       </b-form-group>
       <b-button type="submit" variant="primary">Submit</b-button>
