@@ -3,7 +3,27 @@ const connectDB = require('../lib/connectDB');
 module.exports = {
   getVoto: function(req, res){
     connectDB.makeConnection((con) => {
-      var q = "select eleitor.nome, candidato.nome, voto.data from eleitor, candidato, voto where voto.id = " + req.param("id") + " AND eleitor.id = voto.id_eleitor AND candidato.id = voto.id_candidato" + " AND endereco.id_municipio = municipio.id AND municipio.id_estado = estado.id";
+      var q = "select eleitor.nome AS eleitor, candidato.id AS candidato, voto.data from eleitor, candidato, voto where voto.id_eleitor = " + req.param("id_eleitor") + " AND voto.id_candidato = "+ req.param("id_candidato") + " AND eleitor.id = "+ req.param("id_eleitor") +" AND candidato.id = " + req.param("id_candidato");
+      con.query(q, (err, row) => {
+        if (err) throw err;
+        res.json(row);
+      });
+    }, true);
+  },
+
+  getVotoSafe: function(req, res){
+    connectDB.makeConnection((con) => {
+      var q = "select candidato.id, safe_voto.data from candidato, safe_voto where safe_voto.id_candidato = " + req.param("id") + " AND candidato.id = safe_voto.id_candidato";
+      con.query(q, (err, row) => {
+        if (err) throw err;
+        res.json(row);
+      });
+    }, true);
+  },
+
+  getAllVotos: function(req, res){
+    connectDB.makeConnection((con) => {
+      var q = "select candidato.id, safe_voto.data from candidato, safe_voto where candidato.id = safe_voto.id_candidato";
       con.query(q, (err, row) => {
         if (err) throw err;
         res.json(row);
@@ -48,6 +68,7 @@ module.exports = {
       });
     }, true);
   },
+
   updateVoto: function(req, res){
     var q = "UPDATE voto SET " +
           "data = \"" + req.body.data + "\" " +

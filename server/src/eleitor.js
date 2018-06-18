@@ -38,15 +38,12 @@ module.exports = {
         if (err) {
           res.status(400)
           res.json({"error": "Houve um erro com os campo de enderecos"})
-          throw err;
         }
         console.log(q_elei);
 
         con.query(q_elei, (err, row) => {
           if (err) {
-            res.status(400);
             res.json({"error": "Houve um erro com os campo de usuário"})
-            throw err;
           }
           res.status(200);
           res.json({"message": "Criado com sucesso"})
@@ -63,7 +60,6 @@ module.exports = {
         if (err){
           res.status(400);
           res.json({"error": "Erro ao deletar o eleitor"})
-          throw err;
         }
         res.status(200)
         if(row.affectedRows == 0){
@@ -86,16 +82,32 @@ module.exports = {
         req.body.genero,
         req.body.id_secao
       ]
-      
+
       con.query(q, values,(err, row) => {
         if (err){
           res.status(400);
           res.json({"error": "Não foi possível executar a atualização"})
-          throw err;
         }
         res.status(200)
         res.json({"message": "Atualizado com sucesso"});
       });
     }, true)
+  },
+
+  checkSecao: function(req, res){
+    connectDB.makeConnection((con) => {
+      var q = "call checkSecao(" + req.param("titulo_eleitor") + ")";
+
+      con.query(q, (err, row) => {
+        if (err){
+          res.status(400);
+          res.json({"error": "Não foi possível executar a checagem"})
+          throw err;
+        }
+        res.status(200)
+        res.json(row);
+      });
+    }, true)
   }
+
 }

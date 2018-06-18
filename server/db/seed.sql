@@ -1325,6 +1325,11 @@ INSERT INTO candidato (id_pessoa, id_partido, id_cargo)
    ORDER BY rand()
    LIMIT 1;
 
+UPDATE candidato SET foto = LOAD_FILE('./fotos/aecio.jpg')
+    WHERE id_pessoa = (SELECT eleitor.id
+                        FROM eleitor
+                        WHERE eleitor.nome = 'Matheus Nunes');
+
 INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
    SELECT '4319774', 'Ana Lívia Souza', '1924-10-19', 'mulher', secao.id, endereco.cep, endereco.id
    FROM secao, endereco, zona, local

@@ -6,7 +6,7 @@
       <b-row>
         <b-col cols="2">
           <br/>
-          <TableList></TableList>
+          <TableList v-bind:tables="tables"></TableList>
         </b-col>
         <b-col cols="10">
           <br/>
@@ -23,6 +23,7 @@ import Navbar from '@/components/navbar.vue'
 import ParticlesJS from '@/components/Particles'
 import TableList from '@/components/TableList.vue'
 import DBTable from '@/components/DBTable.vue'
+import TablesService from '@/services/TablesService'
 
 export default {
   name: 'Home',
@@ -34,12 +35,25 @@ export default {
   },
   data () {
     return {
+      tables: [],
       items: [
         { isActive: true, age: 40, first_name: 'Dickerson', last_name: 'Macdonald' },
         { isActive: false, age: 21, first_name: 'Larsen', last_name: 'Shaw' },
         { isActive: false, age: 89, first_name: 'Geneva', last_name: 'Wilson' },
         { isActive: true, age: 38, first_name: 'Jami', last_name: 'Carney' }
       ]
+    }
+  },
+  mounted () {
+    this.getTables()
+  },
+  methods: {
+    async getTables(){
+      const response = await TablesService.fetchTables()
+      if(response.error){
+
+      }
+      this.tables = response.data
     }
   }
 }
