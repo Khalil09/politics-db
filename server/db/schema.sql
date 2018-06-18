@@ -25,7 +25,7 @@ CREATE TABLE chapa (
 );
 
 CREATE TABLE candidato (
-    foto BLOB,
+    foto LONGBLOB,
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     id_pessoa INTEGER,
     id_partido INTEGER,

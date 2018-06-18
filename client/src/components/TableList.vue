@@ -13,24 +13,18 @@
 </template>
 
 <script>
-import TablesService from '@/services/TablesService'
-
 export default {
   name: 'TableList',
-  data() {
-    return {
-      tables: []
+  data () {
+    return {}
+  },
+  props: {
+    tables: {
+      type: Array,
+      required: true
     }
   },
-  mounted() {
-    this.getTables()
-  },
-  methods: {
-    async getTables(){
-      const response = await TablesService.fetchTables()
-      this.tables = response.data
-    }
-  },
+  methods: {},
   filters: {
     capitalize: function (value) {
       if (!value) return ''
