@@ -40,6 +40,7 @@ app.delete('/api/eleitor/:id', (req, res) => {
 
 app.post('/api/eleitor/update/:id', (req, res) => {
   eleitor.updateEleitor(req, res);
+})
 
 app.post('/api/voto/new', (req, res) => {
   voto.createVoto(req, res);
@@ -65,4 +66,4 @@ app.post('/api/endereco/update/:id', (req, res) => {
   endereco.updateEndereco(req, res);
 })
 
-app.listen(process.env.PORT || 8081)
+app.listen(process.env.PORT || 8081);
