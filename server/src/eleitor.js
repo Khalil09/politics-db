@@ -38,15 +38,12 @@ module.exports = {
         if (err) {
           res.status(400)
           res.json({"error": "Houve um erro com os campo de enderecos"})
-          throw err;
         }
         console.log(q_elei);
 
         con.query(q_elei, (err, row) => {
           if (err) {
-            res.status(400);
             res.json({"error": "Houve um erro com os campo de usuário"})
-            throw err;
           }
           res.status(200);
           res.json({"message": "Criado com sucesso"})
@@ -63,14 +60,9 @@ module.exports = {
         if (err){
           res.status(400);
           res.json({"error": "Erro ao deletar o eleitor"})
-          throw err;
         }
         res.status(200)
-        if(row.affectedRows == 0){
-          res.json({"message": "Não existe tal eleitor"});
-        } else {
-          res.json({"message": "Deletado com sucesso"});
-        }
+        res.json({"message": "Deletado com sucesso"});
       });
     }, true)
   },
@@ -86,12 +78,11 @@ module.exports = {
         req.body.genero,
         req.body.id_secao
       ]
-      
+
       con.query(q, values,(err, row) => {
         if (err){
           res.status(400);
           res.json({"error": "Não foi possível executar a atualização"})
-          throw err;
         }
         res.status(200)
         res.json({"message": "Atualizado com sucesso"});

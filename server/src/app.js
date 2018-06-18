@@ -59,16 +59,11 @@ app.get('/api/votoseguro/completo/:id', (req, res) => {
   voto.getVotoSafe(req, res);
 })
 
-
 app.post('/api/voto/new', (req, res) => {
   voto.createVoto(req, res);
 })
 
-app.post('/api/voto/new', (req, res) => {
-  voto.createVoto(req, res);
-})
-
-app.delete('/api/voto/delete/:id_eleitor/:id_candidato', (req, res) => {
+app.delete('/api/voto/:id_eleitor/:id_candidato', (req, res) => {
   voto.deleteVoto(req, res);
 })
 
@@ -80,7 +75,7 @@ app.post('/api/endereco/new', (req, res) => {
   endereco.createEndereco(req, res);
 })
 
-app.delete('/api/endereco/delete/:id', (req, res) => {
+app.delete('/api/endereco/:id', (req, res) => {
   endereco.deleteEndereco(req, res);
 })
 

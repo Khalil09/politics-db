@@ -2,73 +2,40 @@
   <div class="bd-sidebar">
     <nav id="bd-docs-nav" class="bd-links navbar-collapse collapse show" style="">
       <nav class="bd-links navbar-collapse collapse show" id="bd-docs-nav" style="">
-        <div class="bd-toc-item active">
-          <a href="/docs/" class="bd-toc-link nuxt-link-active">Getting started</a>
-          <ul class="bd-sidenav nav">
-          </ul>
-        </div>
-
-        <div class="bd-toc-item active">
-          <a href="/docs/" class="bd-toc-link nuxt-link-active">Getting started</a>
-          <ul class="bd-sidenav nav">
-          </ul>
-        </div>
-
-        <div class="bd-toc-item active">
-          <a href="/docs/" class="bd-toc-link nuxt-link-active">Getting started</a>
-          <ul class="bd-sidenav nav">
-          </ul>
-        </div>
-
-        <div class="bd-toc-item active">
-          <a href="/docs/" class="bd-toc-link nuxt-link-active">Getting started</a>
-          <ul class="bd-sidenav nav">
-          </ul>
-        </div>
-
-        <div class="bd-toc-item active">
-          <a href="/docs/" class="bd-toc-link nuxt-link-active">Getting started</a>
-          <ul class="bd-sidenav nav">
-          </ul>
-        </div>
-
-        <div class="bd-toc-item active">
-          <a href="/docs/" class="bd-toc-link nuxt-link-active">Getting started</a>
-          <ul class="bd-sidenav nav">
-          </ul>
-        </div>
-
-        <div class="bd-toc-item active">
-          <a href="/docs/" class="bd-toc-link nuxt-link-active">Getting started</a>
-          <ul class="bd-sidenav nav">
-          </ul>
-        </div>
-
-        <div class="bd-toc-item active">
-          <a href="/docs/" class="bd-toc-link nuxt-link-active">Getting started</a>
+        <div v-for="table in tables" class="bd-toc-item active">
+          <router-link v-bind:to="'/'+ table.Tables_in_politics_db" class="bd-toc-link nuxt-link-active">{{table.Tables_in_politics_db | capitalize}}</router-link>
           <ul class="bd-sidenav nav">
           </ul>
         </div>
       </nav>
     </nav>
   </div>
-
-  <!-- <div class="container-fluid bg">
-    <div class="row flex-xl-nowrap2">
-
-    </div>
-  </div> -->
 </template>
 
 <script>
 export default {
   name: 'TableList',
-  components: {}
+  data () {
+    return {}
+  },
+  props: {
+    tables: {
+      type: Array,
+      required: true
+    }
+  },
+  methods: {},
+  filters: {
+    capitalize: function (value) {
+      if (!value) return ''
+      value = value.toString()
+      return value.charAt(0).toUpperCase() + value.slice(1)
+    }
+  }
 }
 </script>
 
 <style scoped>
-
 .nav {
   display: -ms-flexbox;
   display: flex;
@@ -80,12 +47,17 @@ export default {
 }
 
 li {
-display: list-item;
-text-align: -webkit-match-parent;
+  display: list-item;
+  text-align: -webkit-match-parent;
 }
 
-.bd-toc-item.active>.bd-toc-link {
-color: rgba(0,0,0,.85);
+.bd-links.active {
+  padding-top: 16px;
+  padding-top: 1rem;
+  padding-bottom: 16px;
+  padding-bottom: 1rem;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .bd-links {
@@ -120,24 +92,7 @@ color: rgba(0,0,0,.85);
   order: 0;
   border-bottom: 1px solid rgba(0,0,0,.1);
   background-color: white;
-}
-
-.bd-search {
-  position: relative;
-  padding: 16px 15px;
-  padding: 1rem 15px;
-  margin-right: -15px;
-  margin-left: -15px;
-  border-bottom: 1px solid rgba(0,0,0,.05);
-}
-
-.bd-links {
-  padding-top: 16px;
-  padding-top: 1rem;
-  padding-bottom: 16px;
-  padding-bottom: 1rem;
-  margin-right: -15px;
-  margin-left: -15px;
+  height: 100%;
 }
 
 .navbar-collapse {
@@ -148,21 +103,4 @@ color: rgba(0,0,0,.85);
   -ms-flex-align: center;
   align-items: center;
 }
-
-.form-control {
-  display: block;
-  width: 100%;
-  padding: 6px 12px;
-  padding: .375rem .75rem;
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
 </style>
