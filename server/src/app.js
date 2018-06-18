@@ -17,6 +17,10 @@ app.get('/api/tables', (req, res) => {
   indexTable.getTablesName(req, res);
 })
 
+app.get('/api/votoseguro', (req, res) => {
+  voto.getAllVotos(req, res);
+})
+
 app.get('/api/:table', (req, res) => {
   indexTable.getAll(req, res);
 })
@@ -44,6 +48,19 @@ app.post('/api/eleitor/update/:id', (req, res) => {
 
 app.get('/api/eleitor/checkSecao/:titulo_eleitor', (req, res) => {
   eleitor.checkSecao(req, res);
+})
+
+app.get('/api/voto/completo/:id_eleitor/:id_candidato', (req, res) => {
+  voto.getVoto(req, res);
+})
+
+app.get('/api/votoseguro/completo/:id', (req, res) => {
+  voto.getVotoSafe(req, res);
+})
+
+
+app.post('/api/voto/new', (req, res) => {
+  voto.createVoto(req, res);
 })
 
 app.post('/api/voto/new', (req, res) => {
