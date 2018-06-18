@@ -62,7 +62,6 @@ export default {
 </script>
 
 <style scoped>
-
 .nav {
   display: -ms-flexbox;
   display: flex;
@@ -121,6 +120,4 @@ text-align: -webkit-match-parent;
   -ms-flex-align: center;
   align-items: center;
 }
-
-
 </style>

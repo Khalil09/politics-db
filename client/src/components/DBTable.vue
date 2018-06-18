@@ -20,8 +20,11 @@
 
     <b-table show-empty stacked="md" :items="items" :fields="fields" :current-page="currentPage" :per-page="perPage" :filter="filter" @filtered="onFiltered">
       <template slot="actions" slot-scope="row">
-        <b-button size="sm" @click.stop="info(row.item, row.index, $event.target)" class="mr-1">
+        <b-button size="sm" @click.stop="editItem(row.item, row.index, $event.target)" class="mr-1">
           Edit
+        </b-button>
+        <b-button size="sm" @click.stop="removeItem(row.item, row.index, $event.target)" class="mr-1">
+          Delete
         </b-button>
       </template>
     </b-table>
@@ -41,57 +44,60 @@
 </template>
 
 <script>
-  export default {
-    name: 'DBTable',
-    components: {},
-    props: {
-      dt: {
-        type: Array,
-        required: true
-      }
+export default {
+  name: 'DBTable',
+  components: {},
+  props: {
+    dt: {
+      type: Array,
+      required: true
+    }
+  },
+  data () {
+    return {
+      fields: getFields(this.dt),
+      items: this.dt,
+      currentPage: 1,
+      perPage: 5,
+      totalRows: this.dt.length,
+      pageOptions: [ 5, 10, 15 ],
+      filter: null,
+      modalInfo: { title: 'Edit', content: '' }
+    }
+  },
+  computed: {},
+  methods: {
+    editItem (item, index, button) {
+      this.modalInfo.content = JSON.stringify(item, null, 2)
+      this.$root.$emit('bv::show::modal', 'modalInfo', button)
     },
-    data () {
-      return {
-        fields: getFields(this.dt),
-        items: this.dt,
-        currentPage: 1,
-        perPage: 5,
-        totalRows: this.dt.length,
-        pageOptions: [ 5, 10, 15 ],
-        filter: null,
-        modalInfo: { title: '', content: '' }
-      }
+    removeItem (item, index, button) {
+      // TODO: activate API to delete this item
+      // TODO: reload page on this table
     },
-    computed: {},
-    methods: {
-      info (item, index, button) {
-        this.modalInfo.title = `Row index: ${index}`
-        this.modalInfo.content = JSON.stringify(item, null, 2)
-        this.$root.$emit('bv::show::modal', 'modalInfo', button)
-      },
-      resetModal () {
-        this.modalInfo.title = ''
-        this.modalInfo.content = ''
-      },
-      onFiltered (filteredItems) {
-        // Trigger pagination to update the number of buttons/pages due to filtering
-        this.totalRows = filteredItems.length
-        this.currentPage = 1
-      }
+    resetModal () {
+      this.modalInfo.title = ''
+      this.modalInfo.content = ''
+    },
+    onFiltered (filteredItems) {
+      // Trigger pagination to update the number of buttons/pages due to filtering
+      this.totalRows = filteredItems.length
+      this.currentPage = 1
     }
   }
+}
 
-  function getFields (items) {
-    let res = Object.keys(items[0])
+function getFields (items) {
+  let res = Object.keys(items[0])
 
-    res.push("actions")
-    console.log(res)
+  res.push('actions')
+  console.log(res)
 
-    return res
-  } 
+  return res
+}
 </script>
 
-<style>
+<style scoped>
   .box {
     background-color: white;
     padding: 10px;
