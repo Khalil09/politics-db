@@ -73,7 +73,7 @@ export default {
     }
   },
   methods: {
-    onSubmit (evt) {
+    async onSubmit (evt) {
       evt.preventDefault();
 
       const response = await TablesService.updateTableData(form, this.table, )
