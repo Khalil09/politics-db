@@ -63,6 +63,10 @@ export default {
     dt: {
       type: Array,
       required: true
+    },
+    table: {
+      type: String,
+      required: true
     }
   },
   data () {
