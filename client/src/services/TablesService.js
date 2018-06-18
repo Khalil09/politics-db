@@ -12,7 +12,7 @@ export default {
     }
   },
   createTableData (req, table) {
-    return Api().post(req, table + '/new')
+    return Api().post(table + '/new', req)
   },
   updateTableData (req, table, id) {
     return Api().post(table + '/update/' + id, req)
