@@ -19,5 +19,8 @@ export default {
   },
   removeTableData (table, id) {
     return Api().delete(table + '/' + id)
+  },
+  removeVoto (eleitor, candidato) {
+    return Api().delete('voto/' + eleitor + '/' + candidato)
   }
 }

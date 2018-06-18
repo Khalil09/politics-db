@@ -10,7 +10,7 @@
         </b-col>
         <b-col cols="10">
           <br/>
-          <dbTable v-if="isNotHome" v-bind:table="table" v-bind:dt="items"></dbTable>
+          <dbTable v-if="items" v-bind:table="table" v-bind:dt="items"></dbTable>
         </b-col>
         <b-col cols="2"></b-col>
       </b-row>
@@ -37,8 +37,8 @@ export default {
     return {
       table: "",
       tables: [],
-      items: [],
-      isNotHome: false
+      items: null,
+      isNotHome: true
     }
   },
   mounted () {
@@ -48,25 +48,24 @@ export default {
   methods: {
     async getTables (){
       const response = await TablesService.fetchTables()
-      
       if(response.error){
-        console.log(response.error)
-      }
 
+      }
       this.tables = response.data
     },
     async getTable (){
-      this.isNotHome = !(this.$router.currentRoute.name === "Home")
+      if (!(this.$router.currentRoute.name === "Home")) {
+        this.table = this.$router.currentRoute.name.toLowerCase()
 
-      if (!this.isNotHome) {
-        this.table = this.$router.currentRoute.name
+        const response = await TablesService.fetchTableData(this.table)
 
-        const response = await TablesService.fetchTableData(this.table.toLowerCase())
+        console.log(response)
 
         if(response.error) {
           console.log(response.error)
         } else {
           this.items = response.data
+          this.isNotHome = true
         }
       }
     },

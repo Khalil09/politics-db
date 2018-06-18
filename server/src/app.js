@@ -62,7 +62,7 @@ app.post('/api/voto/new', (req, res) => {
   voto.createVoto(req, res);
 })
 
-app.delete('/api/voto/delete/:id_eleitor/:id_candidato', (req, res) => {
+app.delete('/api/voto/:id_eleitor/:id_candidato', (req, res) => {
   voto.deleteVoto(req, res);
 })
 
