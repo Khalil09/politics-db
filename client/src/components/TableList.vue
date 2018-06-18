@@ -2,52 +2,9 @@
   <div class="bd-sidebar">
     <nav id="bd-docs-nav" class="bd-links navbar-collapse collapse show" style="">
       <nav class="bd-links navbar-collapse collapse show" id="bd-docs-nav" style="">
-        <div class="bd-toc-item active">
-          <a href="/docs/" class="bd-toc-link nuxt-link-active">Getting started</a>
-          <ul class="bd-sidenav nav">
-          </ul>
-        </div>
-
-        <div class="bd-toc-item active">
-          <a href="/docs/" class="bd-toc-link nuxt-link-active">Getting started</a>
-          <ul class="bd-sidenav nav">
-          </ul>
-        </div>
-
-        <div class="bd-toc-item active">
-          <a href="/docs/" class="bd-toc-link nuxt-link-active">Getting started</a>
-          <ul class="bd-sidenav nav">
-          </ul>
-        </div>
-
-        <div class="bd-toc-item active">
-          <a href="/docs/" class="bd-toc-link nuxt-link-active">Getting started</a>
-          <ul class="bd-sidenav nav">
-          </ul>
-        </div>
-
-        <div class="bd-toc-item active">
-          <a href="/docs/" class="bd-toc-link nuxt-link-active">Getting started</a>
-          <ul class="bd-sidenav nav">
-          </ul>
-        </div>
-
-        <div class="bd-toc-item active">
-          <a href="/docs/" class="bd-toc-link nuxt-link-active">Getting started</a>
-          <ul class="bd-sidenav nav">
-          </ul>
-        </div>
-
-        <div class="bd-toc-item active">
-          <a href="/docs/" class="bd-toc-link nuxt-link-active">Getting started</a>
-          <ul class="bd-sidenav nav">
-          </ul>
-        </div>
-
-        <div class="bd-toc-item active">
-          <a href="/docs/" class="bd-toc-link nuxt-link-active">Getting started</a>
-          <ul class="bd-sidenav nav">
-          </ul>
+        <div v-for="table in tables" class="bd-toc-item">
+          <a href="/" class="bd-toc-link nuxt-link-active">{{table.Tables_in_politics_db}}</a>
+          <ul class="bd-sidenav nav"></ul>
         </div>
       </nav>
     </nav>
@@ -55,8 +12,25 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'TableList',
+  data () {
+    return {
+      tables: null
+    }
+  },
+  mounted () {
+    console.log('as')
+    axios
+      .get('http://localhost:8081/api/tables')
+      .then(res => {
+        console.log(res)
+        this.tables = res
+      })
+      .catch()
+  },
   components: {}
 }
 </script>

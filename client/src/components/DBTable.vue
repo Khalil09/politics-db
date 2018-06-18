@@ -73,7 +73,7 @@ export default {
     },
     removeItem (item, index, button) {
       // TODO: activate API to delete this item
-      // TODO: reload page on this table
+      location.reload()
     },
     resetModal () {
       this.modalInfo.title = ''
@@ -91,7 +91,6 @@ function getFields (items) {
   let res = Object.keys(items[0])
 
   res.push('actions')
-  console.log(res)
 
   return res
 }
