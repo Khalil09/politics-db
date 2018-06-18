@@ -17,7 +17,26 @@
         </b-form-group>
       </b-col>
     </b-row>
+    <b-row>
+      <b-col md="6" class="my-1">
+        <b-btn v-if="isVoto" v-b-modal.voto>Add Voto</b-btn>
+        <b-btn v-if="isEndereco" v-b-modal.endereco>Add Endereço</b-btn>
+        <b-btn v-if="isEleitor" v-b-modal.eleitor>Add Eleitor</b-btn>
 
+        <b-modal id="voto" title="Add">
+          <p class="my-4">Hello from modal!</p>
+        </b-modal>
+
+        <b-modal id="endereco" title="Add">
+          <p class="my-4">Hello from modal!</p>
+        </b-modal>
+
+        <b-modal id="eleitor" title="Add">
+          <p class="my-4">Hello from modal!</p>
+        </b-modal>
+      </b-col>
+    </b-row>
+    <br>
     <b-table show-empty stacked="md" :items="items" :fields="fields" :current-page="currentPage" :per-page="perPage" :filter="filter" @filtered="onFiltered">
       <template slot="actions" slot-scope="row">
         <b-button size="sm" @click.stop="row.toggleDetails" class="mr-2">
@@ -78,8 +97,14 @@ export default {
       totalRows: this.dt.length,
       pageOptions: [ 5, 10, 15 ],
       filter: null,
-      modalInfo: { title: 'Edit', content: '' }
+      modalInfo: { title: 'Edit', content: '' },
+      isVoto: false,
+      isEndereco: false,
+      isEleitor: false
     }
+  },
+  mounted () {
+    this.checkStuff()
   },
   computed: {},
   methods: {
@@ -108,6 +133,14 @@ export default {
       // Trigger pagination to update the number of buttons/pages due to filtering
       this.totalRows = filteredItems.length
       this.currentPage = 1
+    },
+    checkStuff () {
+      this.isVoto = (this.table == 'voto')
+      console.log(this.isVoto)
+      this.isEndereco = (this.table == 'endereco')
+      console.log(this.isEndereco)
+      this.isEleitor = (this.table == 'eleitor')
+      console.log(this.isEleitor)
     }
   }
 }

@@ -129,7 +129,7 @@ CREATE TABLE eleitor (
 
 ALTER TABLE local ADD FOREIGN KEY(id_zona) REFERENCES zona (id);
 ALTER TABLE municipio ADD FOREIGN KEY(id_estado) REFERENCES estado (id);
-ALTER TABLE candidato ADD FOREIGN KEY(id_pessoa) REFERENCES eleitor (id);
+ALTER TABLE candidato ADD FOREIGN KEY(id_pessoa) REFERENCES eleitor (id) ON DELETE CASCADE;
 ALTER TABLE candidato ADD FOREIGN KEY(id_cargo) REFERENCES cargo (id);
 ALTER TABLE voto ADD FOREIGN KEY(id_eleitor) REFERENCES eleitor (id) ON DELETE CASCADE;
 ALTER TABLE voto ADD FOREIGN KEY(id_urna) REFERENCES urna (id);
