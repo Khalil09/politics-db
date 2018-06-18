@@ -76,7 +76,7 @@ export default {
     onSubmit (evt) {
       evt.preventDefault();
 
-      const response = await TablesService.updateTableData(form, this.table, )
+      const response = await TablesService.createTableData(form, this.table)
 
       if(response.error) {
         console.log(response.error)
