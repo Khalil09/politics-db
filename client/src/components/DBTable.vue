@@ -84,12 +84,17 @@ export default {
   computed: {},
   methods: {
     editItem (item, index, button) {
-      this.modalInfo.content = JSON.stringify(item, null, 2)
       this.$root.$emit('bv::show::modal', 'modalInfo', button)
     },
     async removeItem (item, index, button) {
-      const response = await TablesService.removeTableData(this.table, item.id)
+      let response = {}
 
+      if(this.table == 'voto'){
+        response = await TablesService.removeVoto(item.id_eleitor, item.id_candidato)
+      } else {
+        response = await TablesService.removeTableData(this.table, item.id)
+      }
+      
       if(response.error){
         console.log(response.error)
       } else {
