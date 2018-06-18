@@ -17,16 +17,16 @@ import TablesService from '@/services/TablesService'
 
 export default {
   name: 'TableList',
-  data() {
+  data () {
     return {
       tables: []
     }
   },
-  mounted() {
+  mounted () {
     this.getTables()
   },
   methods: {
-    async getTables(){
+    async getTables () {
       const response = await TablesService.fetchTables()
       this.tables = response.data
     }

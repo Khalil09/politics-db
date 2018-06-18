@@ -20,12 +20,24 @@
 
     <b-table show-empty stacked="md" :items="items" :fields="fields" :current-page="currentPage" :per-page="perPage" :filter="filter" @filtered="onFiltered">
       <template slot="actions" slot-scope="row">
+        <b-button size="sm" @click.stop="row.toggleDetails" class="mr-2">
+          Show
+        </b-button>
         <b-button size="sm" @click.stop="editItem(row.item, row.index, $event.target)" class="mr-1">
           Edit
         </b-button>
         <b-button size="sm" @click.stop="removeItem(row.item, row.index, $event.target)" class="mr-1">
           Delete
         </b-button>
+      </template>
+      <template slot="row-details" slot-scope="row">
+        <b-card>
+          <b-row v-for="(v, k, idx) in row.item" class="mb-2">
+            <b-col sm="3" class="text-sm-right"><b>{{ k }}</b></b-col>
+            <b-col>{{ v }}</b-col>
+          </b-row>
+          <b-button size="sm" @click="row.toggleDetails">Collapse</b-button>
+        </b-card>
       </template>
     </b-table>
 

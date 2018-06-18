@@ -5,6 +5,6 @@ export default {
     return Api().get('tables')
   },
   fetchTableData (table) {
-   return Api().get(table)
+    return Api().get(table)
   }
 }
