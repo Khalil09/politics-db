@@ -6,19 +6,19 @@
         </b-form-input>
       </b-form-group>
       <b-form-group id="nome" label="Nome:" label-for="nomeInput">
-        <b-form-input id="nomeInput" type="number" v-model="form.nome">
+        <b-form-input id="nomeInput" type="text" v-model="form.nome">
         </b-form-input>
       </b-form-group>
       <b-form-group id="data_de_nasc" label="Data Nascimento:" label-for="data_de_nascInput">
-        <b-form-input id="data_de_nascInput" type="number" v-model="form.data_de_nasc">
+        <b-form-input id="data_de_nascInput" type="date" v-model="form.data_de_nasc">
         </b-form-input>
       </b-form-group>
       <b-form-group id="genero" label="Genero:" label-for="generoInput">
-        <b-form-input id="generoInput" type="number" v-model="form.genero">
+        <b-form-input id="generoInput" type="text" v-model="form.genero">
         </b-form-input>
       </b-form-group>
       <b-form-group id="bairro" label="Bairro:" label-for="bairroInput">
-        <b-form-input id="bairroInput" type="number" v-model="form.bairro">
+        <b-form-input id="bairroInput" type="text" v-model="form.bairro">
         </b-form-input>
       </b-form-group>
       <b-form-group id="rua" label="Rua:" label-for="ruaInput">
@@ -30,7 +30,7 @@
         </b-form-input>
       </b-form-group>
       <b-form-group id="complemento" label="Complemento:" label-for="complementoInput">
-        <b-form-input id="complementoInput" type="number" v-model="form.complemento">
+        <b-form-input id="complementoInput" type="text" v-model="form.complemento">
         </b-form-input>
       </b-form-group>
       <b-form-group id="id_municipio" label="Id Municipio:" label-for="id_municipioInput">
