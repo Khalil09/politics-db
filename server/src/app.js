@@ -74,7 +74,7 @@ app.post('/api/endereco/new', (req, res) => {
   endereco.createEndereco(req, res);
 })
 
-app.delete('/api/endereco/delete/:id', (req, res) => {
+app.delete('/api/endereco/:id', (req, res) => {
   endereco.deleteEndereco(req, res);
 })
 

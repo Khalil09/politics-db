@@ -17,7 +17,26 @@
         </b-form-group>
       </b-col>
     </b-row>
+    <b-row>
+      <b-col md="6" class="my-1">
+        <b-btn v-if="isVoto" v-b-modal.voto>Add Voto</b-btn>
+        <b-btn v-if="isEndereco" v-b-modal.endereco>Add Endereço</b-btn>
+        <b-btn v-if="isEleitor" v-b-modal.eleitor>Add Eleitor</b-btn>
 
+        <b-modal id="voto" title="Add">
+          <addVoto></addVoto>
+        </b-modal>
+
+        <b-modal id="endereco" title="Add">
+          <addEndereco></addEndereco>
+        </b-modal>
+
+        <b-modal id="eleitor" title="Add">
+          <addEleitor></addEleitor>
+        </b-modal>
+      </b-col>
+    </b-row>
+    <br>
     <b-table show-empty stacked="md" :items="items" :fields="fields" :current-page="currentPage" :per-page="perPage" :filter="filter" @filtered="onFiltered">
       <template slot="actions" slot-scope="row">
         <b-button size="sm" @click.stop="row.toggleDetails" class="mr-2">
@@ -57,10 +76,18 @@
 
 <script>
 import TablesService from '@/services/TablesService'
+import AddEleitor from '@/components/Eleitor/Add.vue'
+import AddEndereco from '@/components/Endereco/Add.vue'
+import AddVoto from '@/components/Voto/Add.vue'
 
 export default {
   name: 'DBTable',
   components: {},
+  components: {
+    'addEleitor': AddEleitor,
+    'addEndereco': AddEndereco,
+    'addVoto': AddVoto
+  },
   props: {
     dt: {
       type: Array
@@ -78,8 +105,14 @@ export default {
       totalRows: this.dt.length,
       pageOptions: [ 5, 10, 15 ],
       filter: null,
-      modalInfo: { title: 'Edit', content: '' }
+      modalInfo: { title: 'Edit', content: '' },
+      isVoto: false,
+      isEndereco: false,
+      isEleitor: false
     }
+  },
+  mounted () {
+    this.checkStuff()
   },
   computed: {},
   methods: {
@@ -94,7 +127,7 @@ export default {
       } else {
         response = await TablesService.removeTableData(this.table, item.id)
       }
-      
+
       if(response.error){
         console.log(response.error)
       } else {
@@ -109,6 +142,14 @@ export default {
       // Trigger pagination to update the number of buttons/pages due to filtering
       this.totalRows = filteredItems.length
       this.currentPage = 1
+    },
+    checkStuff () {
+      this.isVoto = (this.table == 'voto')
+      console.log(this.isVoto)
+      this.isEndereco = (this.table == 'endereco')
+      console.log(this.isEndereco)
+      this.isEleitor = (this.table == 'eleitor')
+      console.log(this.isEleitor)
     }
   }
 }
