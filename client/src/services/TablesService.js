@@ -22,5 +22,8 @@ export default {
   },
   removeVoto (eleitor, candidato) {
     return Api().delete('voto/' + eleitor + '/' + candidato)
+  },
+  fetchMunicipios () {
+    return Api().get('municipio')
   }
 }

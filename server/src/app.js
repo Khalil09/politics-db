@@ -6,6 +6,7 @@ const indexTable = require('./indexTable')
 const eleitor = require('./eleitor')
 const voto = require('./voto')
 const endereco = require('./endereco')
+const candidato = require('./candidato')
 
 const app = express()
 app.use(morgan('combined'))

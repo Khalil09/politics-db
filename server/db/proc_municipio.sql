@@ -5,7 +5,7 @@ CREATE PROCEDURE checkSecao(tit_eleitor BIGINT(20))
 BEGIN
     DECLARE MUN_SEC INT;
     DECLARE MUN_END INT;
-    
+
     SELECT zona.id_municipio
     INTO MUN_SEC
     FROM eleitor, zona, local, secao

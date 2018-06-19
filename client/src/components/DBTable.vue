@@ -24,7 +24,7 @@
         <b-btn v-if="isEleitor" v-b-modal.eleitor>Add Eleitor</b-btn>
 
         <b-modal id="voto" title="Add">
-          <addVoto></addVoto>
+          <addVoto v-bind:table="table"></addVoto>
         </b-modal>
 
         <b-modal id="endereco" title="Add">

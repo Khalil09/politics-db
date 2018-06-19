@@ -35,15 +35,21 @@ export default {
   },
   data () {
     return {
-      table: "",
+      table: '',
       tables: [],
       items: null,
       isNotHome: true
     }
   },
   mounted () {
-    this.getTable()
     this.getTables()
+    this.getTable()
+  },
+  watch: {
+    $route (to, from){
+        this.getTable();
+        location.reload();
+    }
   },
   methods: {
     async getTables (){
@@ -56,7 +62,6 @@ export default {
     async getTable (){
       if (!(this.$router.currentRoute.name === "Home")) {
         this.table = this.$router.currentRoute.name.toLowerCase()
-
         const response = await TablesService.fetchTableData(this.table)
 
         console.log(response)
