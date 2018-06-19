@@ -87,4 +87,28 @@ app.post('/api/endereco/update/:id', (req, res) => {
   endereco.updateEndereco(req, res);
 })
 
+app.get('/api/candidato/completo/:id', (req, res) => {
+  candidato.getCandidato(req, res);
+})
+
+app.get('/api/candidato/all/', (req, res) => {
+  candidato.getAllCandidato(req, res);
+})
+
+app.post('/api/candidato/new', (req, res) => {
+  candidato.createCandidato(req, res);
+})
+
+app.delete('/api/candidato/:id', (req, res) => {
+  candidato.deleteCandidato(req, res);
+})
+
+app.post('/api/candidato/update/:id', (req, res) => {
+  candidato.updateCandidato(req, res);
+})
+
+app.post('/api/candidato/addphoto/:id', (req, res) => {
+  candidato.addPhoto(req, res);
+})
+
 app.listen(process.env.PORT || 8081);

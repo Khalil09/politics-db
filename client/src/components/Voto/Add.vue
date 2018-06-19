@@ -6,11 +6,11 @@
       </b-form-group>
 
       <b-form-group id="id_candidato" label="Id Candidato:" label-for="idInput">
-        <b-form-input id="id_candidatoInput" type="number" v-model="form.id">
+        <b-form-input id="id_candidatoInput" type="number" v-model="form.id_candidato">
         </b-form-input>
       </b-form-group>
       <b-form-group id="id_urna" label="Id Urna:" label-for="idInput">
-        <b-form-input id="id_candidatoInput" type="number" v-model="form.id">
+        <b-form-input id="id_UrnaInput" type="number" v-model="form.id_urna">
         </b-form-input>
       </b-form-group>
       <b-button type="submit" variant="primary">Submit</b-button>
@@ -55,6 +55,12 @@ export default {
     },
     async getOptionsEleitor() {
       var response = await TablesService.fetchEleitor()
+      response.data.forEach((element) => {
+          this.options.push({value: element.id, text: element.titulo_eleitor + ' - ' + element.nome})
+      })
+    },
+    async getOptionsCandidato() {
+      var response = await TablesService.fetchCandidato()
       response.data.forEach((element) => {
           this.options.push({value: element.id, text: element.titulo_eleitor + ' - ' + element.nome})
       })

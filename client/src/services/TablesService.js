@@ -28,5 +28,8 @@ export default {
   },
   fetchEleitor () {
     return Api().get('eleitor')
+  },
+  fetchCandidato (id) {
+    return Api().get('candidato/all')
   }
 }
