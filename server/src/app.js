@@ -71,6 +71,10 @@ app.post('/api/voto/update/:id_eleitor/:id_candidato', (req, res) => {
   voto.updateVoto(req, res);
 })
 
+app.get('/api/endereco/completo/:id', (req, res) => {
+  endereco.getEndereco(req, res);
+})
+
 app.post('/api/endereco/new', (req, res) => {
   endereco.createEndereco(req, res);
 })

@@ -3,7 +3,7 @@ const connectDB = require('../lib/connectDB');
 module.exports = {
   getEndereco: function(req, res){
     connectDB.makeConnection((con) => {
-      var q = "select endereco.*, municipio.*, estado.* where endereco.id = " + req.param("id") + " AND enedereco.id_municipio = municipio.id AND municipio.id_estado = estado.id";
+      var q = "select endereco.*, municipio.*, estado.* from endereco, municipio, estado where endereco.id = " + req.param("id") + " AND endereco.id_municipio = municipio.id AND municipio.id_estado = estado.id";
       con.query(q, (err, row) => {
         if (err) throw err;
         res.json(row);
@@ -53,15 +53,17 @@ module.exports = {
   },
 
   updateEndereco: function(req, res){
-    var q = "UPDATE endereco SET " +
-          "bairro = \"" + req.body.bairro + "\", " +
-          "rua = \"" + req.body.rua + "\", " +
-          "complemento = \"" + req.body.complemento + "\", " +
-          "id_municipio = \"" + req.body.id_municipio + "\" " +
-          "WHERE id = " + req.param("id");
-
     connectDB.makeConnection((con) => {
-      con.query(q, (err, row) => {
+      var q = "UPDATE endereco SET bairro = ?, rua = ?, complemento = ?, id_municipio = ? WHERE id = " + req.param("id");
+
+      var values = [ 
+        req.body.bairro,
+        req.body.rua,
+        req.body.complemento,
+        req.body.id_municipio
+      ]
+
+      con.query(q, values, (err, row) => {
         if (err) {
           res.status(400);
           res.json({"error": "Houve um erro ao atualizar o endereço"});

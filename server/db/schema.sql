@@ -93,7 +93,7 @@ CREATE TABLE secao (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100),
     id_local INTEGER,
-    FOREIGN KEY(id_local) REFERENCES local (id)
+    FOREIGN KEY(id_local) REFERENCES local (id) ON DELETE CASCADE
 );
 
 CREATE TABLE doacao (
@@ -102,15 +102,15 @@ CREATE TABLE doacao (
     id INTEGER PRIMARY KEY,
     id_empresa INTEGER,
     id_partido INTEGER,
-    FOREIGN KEY(id_empresa) REFERENCES empresa (id),
-    FOREIGN KEY(id_partido) REFERENCES partido (id)
+    FOREIGN KEY(id_empresa) REFERENCES empresa (id) ON DELETE CASCADE,
+    FOREIGN KEY(id_partido) REFERENCES partido (id) ON DELETE CASCADE
 );
 
 CREATE TABLE mesario (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     id_eleitor INTEGER,
     id_secao INTEGER,
-    FOREIGN KEY(id_secao) REFERENCES secao (id),
+    FOREIGN KEY(id_secao) REFERENCES secao (id) ON DELETE CASCADE,
     UNIQUE(id_eleitor)
 );
 
@@ -123,15 +123,15 @@ CREATE TABLE eleitor (
     id_secao INTEGER,
     cep_endereco INTEGER,
     id_endereco INTEGER,
-    FOREIGN KEY(id_secao) REFERENCES secao (id),
-    FOREIGN KEY(id_endereco, cep_endereco) REFERENCES endereco (id, cep) ON DELETE CASCADE
+    FOREIGN KEY(id_secao) REFERENCES secao (id) ON DELETE SET NULL,
+    FOREIGN KEY(id_endereco, cep_endereco) REFERENCES endereco (id, cep) ON DELETE SET NULL
 );
 
-ALTER TABLE local ADD FOREIGN KEY(id_zona) REFERENCES zona (id);
-ALTER TABLE municipio ADD FOREIGN KEY(id_estado) REFERENCES estado (id);
+ALTER TABLE local ADD FOREIGN KEY(id_zona) REFERENCES zona (id) ON DELETE CASCADE;
+ALTER TABLE municipio ADD FOREIGN KEY(id_estado) REFERENCES estado (id) ON DELETE CASCADE;
 ALTER TABLE candidato ADD FOREIGN KEY(id_pessoa) REFERENCES eleitor (id) ON DELETE CASCADE;
-ALTER TABLE candidato ADD FOREIGN KEY(id_cargo) REFERENCES cargo (id);
+ALTER TABLE candidato ADD FOREIGN KEY(id_cargo) REFERENCES cargo (id) ON DELETE CASCADE;
 ALTER TABLE voto ADD FOREIGN KEY(id_eleitor) REFERENCES eleitor (id) ON DELETE CASCADE;
-ALTER TABLE voto ADD FOREIGN KEY(id_urna) REFERENCES urna (id);
-ALTER TABLE urna ADD FOREIGN KEY(id_secao) REFERENCES secao (id);
-ALTER TABLE mesario ADD FOREIGN KEY(id_eleitor) REFERENCES eleitor (id);
+ALTER TABLE voto ADD FOREIGN KEY(id_urna) REFERENCES urna (id) ON DELETE CASCADE;
+ALTER TABLE urna ADD FOREIGN KEY(id_secao) REFERENCES secao (id) ON DELETE CASCADE;
+ALTER TABLE mesario ADD FOREIGN KEY(id_eleitor) REFERENCES eleitor (id) ON DELETE CASCADE;
