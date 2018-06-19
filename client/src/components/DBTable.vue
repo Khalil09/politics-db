@@ -28,11 +28,11 @@
         </b-modal>
 
         <b-modal id="endereco" title="Add">
-          <addEndereco></addEndereco>
+          <addEndereco v-bind:table="table"></addEndereco>
         </b-modal>
 
         <b-modal id="eleitor" title="Add">
-          <addEleitor></addEleitor>
+          <addEleitor v-bind:table="table"></addEleitor>
         </b-modal>
       </b-col>
     </b-row>

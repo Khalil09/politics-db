@@ -7,7 +7,7 @@
       </b-form-group>
 
       <b-form-group id="rua" label="Rua:" label-for="ruaInput">
-        <b-form-input id="ruaInput" type="number" v-model="form.rua">
+        <b-form-input id="ruaInput" type="text" v-model="form.rua">
         </b-form-input>
       </b-form-group>
 
@@ -51,6 +51,9 @@
 import TablesService from '@/services/TablesService'
 
 export default {
+  props: {
+    table: String
+  },
   data () {
     return {
       form: {
@@ -62,10 +65,11 @@ export default {
         id_municipio: null,
         id_secao: null,
       },
-      options: []
+      options: [
+        {value: null, text: 'Selecione um muncipio'}
+      ]
     }
   },
-  
   mounted () {
     this.getOptionsMunicipio()
   },
@@ -73,7 +77,7 @@ export default {
     async onSubmit (evt) {
       evt.preventDefault();
 
-      const response = await TablesService.createTableData(form, this.table)
+      const response = await TablesService.createTableData(this.form, this.table)
 
       if(response.error) {
         console.log(response.error)

@@ -25,5 +25,8 @@ export default {
   },
   fetchMunicipios () {
     return Api().get('municipio')
+  },
+  fetchEleitor () {
+    return Api().get('eleitor')
   }
 }

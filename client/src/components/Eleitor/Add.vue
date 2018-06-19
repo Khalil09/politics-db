@@ -19,8 +19,8 @@
       <b-form-group id="genero" label="Genero:" label-for="generoInput">
         <b-form-select id="genero" v-model="form.genero" class="mb-3">
           <option :value="null">Selecione o Genero</option>
-          <option value="Homem">Homem</option>
-          <option value="Mulher">Mulher</option>
+          <option value="Homem">homem</option>
+          <option value="Mulher">mulher</option>
         </b-form-select>
       </b-form-group>
 
@@ -105,7 +105,7 @@ export default {
   methods: {
     async onSubmit (evt) {
       evt.preventDefault();
-
+      console.log("TABLE: ", this.table)
       const response = await TablesService.createTableData(this.form, this.table)
 
       if(response.error) {

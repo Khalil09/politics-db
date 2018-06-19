@@ -6,7 +6,7 @@ const connectDB = require('../lib/connectDB');
 module.exports = {
   getCandidato: function(req, res){
     connectDB.makeConnection((con) => {
-      var q = "SELECT eleitor.nome AS nome, partido.nome AS partido, cargo.nome FROM eleitor, partido, cargo, candidato WHERE eleitor.id = candidato.id_pessoa AND partido.id = candidato.id_partido AND cargo.id = candidato.id_cargo";
+      var q = "SELECT eleitor.nome AS nome, partido.nome AS partido, cargo.nome AS cargo FROM eleitor, partido, cargo, candidato WHERE eleitor.id = candidato.id_pessoa AND partido.id = candidato.id_partido AND cargo.id = candidato.id_cargo";
 
       con.query(q, (err, row) => {
         if (err) throw err;

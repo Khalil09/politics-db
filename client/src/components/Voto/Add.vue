@@ -1,10 +1,10 @@
 <template>
   <div>
     <b-form @submit="onSubmit">
-      <b-form-group id="id_eleitor" label="Id Secao:" label-for="id_secaoInput">
-        <b-form-input id="id_eleitorInput" type="number" v-model="form.id_secao">
-        </b-form-input>
+      <b-form-group id="id_eleitor" label="Eleitor:" label-for="id_eleitorInput">
+          <b-form-select v-model="form.id_eleitor" :options="options" class="mb-3" />
       </b-form-group>
+
       <b-form-group id="id_candidato" label="Id Candidato:" label-for="idInput">
         <b-form-input id="id_candidatoInput" type="number" v-model="form.id">
         </b-form-input>
@@ -34,8 +34,14 @@ export default {
         id_eleitor: null,
         id_candidato: null,
         id_urna: null
-      }
+      },
+      options: [
+        {value: null, text: 'Selecione o eleitor'}
+      ]
     }
+  },
+  mounted () {
+    this.getOptionsEleitor()
   },
   methods: {
     async onSubmit (evt) {
@@ -46,6 +52,12 @@ export default {
       if(response.error) {
         console.log(response.error)
       }
+    },
+    async getOptionsEleitor() {
+      var response = await TablesService.fetchEleitor()
+      response.data.forEach((element) => {
+          this.options.push({value: element.id, text: element.titulo_eleitor + ' - ' + element.nome})
+      })
     }
   }
 }
