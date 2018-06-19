@@ -124,7 +124,7 @@ CREATE TABLE eleitor (
     cep_endereco INTEGER,
     id_endereco INTEGER,
     FOREIGN KEY(id_secao) REFERENCES secao (id),
-    FOREIGN KEY(id_endereco, cep_endereco) REFERENCES endereco (id, cep) ON DELETE CASCADE
+    FOREIGN KEY(id_endereco, cep_endereco) REFERENCES endereco (id, cep) ON DELETE SET NULL
 );
 
 ALTER TABLE local ADD FOREIGN KEY(id_zona) REFERENCES zona (id);

@@ -70,12 +70,14 @@ module.exports = {
   },
 
   updateVoto: function(req, res){
-    var q = "UPDATE voto SET " +
-          "data = \"" + req.body.data + "\" " +
-          "WHERE voto.id_eleitor = " + req.param("id_eleitor") + " AND voto.id_candidato = " + req.param("id_candidato");
-
     connectDB.makeConnection((con) => {
-      con.query(q, (err, row) => {
+      var q = "UPDATE voto SET data = ? " +
+              "WHERE voto.id_eleitor = " + req.param("id_eleitor") + " AND voto.id_candidato = " + req.param("id_candidato");
+      var values = [
+        req.body.data,
+      ]
+
+      con.query(q, values, (err, row) => {
         if (err) {
           res.status(400);
           res.json({"error": "Houve um erro ao atualizar o voto"});
