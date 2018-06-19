@@ -2565,3 +2565,33 @@ INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
    ORDER BY rand()
    LIMIT 1;
 
+INSERT INTO chapa (nome)
+   VALUES ('Stark of Winterfell');
+
+INSERT INTO chapa (nome)
+   VALUES ('Florent of Brightwater Keep');
+
+INSERT INTO chapa (nome)
+   VALUES ('Brook');
+
+INSERT INTO chapa (nome)
+   VALUES ('Pyle');
+
+INSERT INTO chapa (nome)
+   VALUES ('Cordwayner of Hammerhal');
+
+INSERT INTO chapa (nome)
+   VALUES ('Woodfoot of Bear Island');
+
+INSERT INTO chapa (nome)
+   VALUES ('Brune of Brownhollow');
+
+INSERT INTO chapa (nome)
+   VALUES ('Footly of Tumbleton');
+
+INSERT INTO chapa (nome)
+   VALUES ('Sunderly of Saltcliffe');
+
+INSERT INTO chapa (nome)
+   VALUES ('Fowler of Skyreach');
+

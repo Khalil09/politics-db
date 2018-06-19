@@ -6,6 +6,7 @@ const indexTable = require('./indexTable')
 const eleitor = require('./eleitor')
 const voto = require('./voto')
 const endereco = require('./endereco')
+const candidato = require('./candidato')
 
 const app = express()
 app.use(morgan('combined'))
@@ -80,6 +81,26 @@ app.delete('/api/endereco/:id', (req, res) => {
 
 app.post('/api/endereco/update/:id', (req, res) => {
   endereco.updateEndereco(req, res);
+})
+
+app.get('/api/candidato/completo/:id', (req, res) => {
+  candidato.getCandidato(req, res);
+})
+
+app.post('/api/candidato/new', (req, res) => {
+  candidato.createCandidato(req, res);
+})
+
+app.delete('/api/candidato/:id', (req, res) => {
+  candidato.deleteCandidato(req, res);
+})
+
+app.post('/api/candidato/update/:id', (req, res) => {
+  candidato.updateCandidato(req, res);
+})
+
+app.post('/api/candidato/addphoto/:id', (req, res) => {
+  candidato.addPhoto(req, res);
 })
 
 app.listen(process.env.PORT || 8081);

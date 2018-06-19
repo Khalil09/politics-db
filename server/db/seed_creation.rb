@@ -120,6 +120,11 @@ def voto_insert
    LIMIT 1;\n\n"
 end
 
+def chapa_insert
+  "INSERT INTO chapa (nome)
+   VALUES ('#{Faker::GameOfThrones.house}');\n\n"
+end
+
 sqlinsert = {
   'municipio' => :mun_insert, 
   'endereco' => :addr_insert,
@@ -130,7 +135,8 @@ sqlinsert = {
   'eleitor' => :eleitor_insert,
   'candidato' => :candidato_insert,
   'presidente' => :pres_insert,
-  'voto' => :voto_insert
+  'voto' => :voto_insert,
+  'chapa' => :chapa_insert
 }
 
 File.open(seed_name, 'a') do |file|
