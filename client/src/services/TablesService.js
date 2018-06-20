@@ -31,7 +31,14 @@ export default {
   },
   fetchCandidato (id) {
     return Api().get('candidato/all')
+  },
+  addPhotoToCandidato (req, id) {
+    return Api().post('candidato/addphoto', req)
+  },
+  fetchPhoto (id) {
+    return Api().get('candidato/sendphoto/' + id)
   }
+
   // fetchPessoas() {
   //   return Api().get('pessoas/all')
   // },

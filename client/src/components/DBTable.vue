@@ -47,6 +47,12 @@
         <b-button size="sm" @click.stop="row.toggleDetails" class="mr-2">
           Show
         </b-button>
+        <b-button size="sm" v-if="isCandidato" @click.stop="see(row.item, row.index, $event.target)" class="mr-1">
+          See
+        </b-button>
+        <b-button size="sm" v-if="isCandidato" @click.stop="upload(row.item, row.index, $event.target)" class="mr-1">
+          Upload
+        </b-button>
         <b-button size="sm" v-if="isVoto" @click.stop="editVoto(row.item, row.index, $event.target)" class="mr-1">
           Edit
         </b-button>
@@ -98,6 +104,9 @@
       <editEleitor v-bind:table="table" v-bind:form="modalInfo.item"></editEleitor>
     </b-modal>
 
+    <b-modal id="photo" title="Add Photo">
+      <addPhoto v-bind:candidato="candidato"></addPhoto>
+    </b-modal>
   </b-container>
 </template>
 
@@ -111,6 +120,7 @@ import EditEleitor from '@/components/Eleitor/Edit.vue'
 import EditEndereco from '@/components/Endereco/Edit.vue'
 import EditVoto from '@/components/Voto/Edit.vue'
 import EditCandidato from '@/components/Candidato/Edit.vue'
+import AddPhoto from '@/components/addPhoto.vue'
 
 export default {
   name: 'DBTable',
@@ -122,7 +132,8 @@ export default {
     'editEleitor': EditEleitor,
     'editEndereco': EditEndereco,
     'editVoto': EditVoto,
-    'editCandidato': EditCandidato
+    'editCandidato': EditCandidato,
+    'addPhoto': AddPhoto
   },
   props: {
     dt: {
@@ -145,7 +156,9 @@ export default {
       isVoto: false,
       isEndereco: false,
       isEleitor: false,
-      isCandidato: false
+      isCandidato: false,
+      candidato: {},
+      foto: {}
     }
   },
   mounted () {
@@ -153,6 +166,18 @@ export default {
   },
   computed: {},
   methods: {
+    see (item, index, button) {
+      this.foto = item
+      var dataUri = TablesService.fetchPhoto(item.id)
+      console.log(dataUri)
+      // pega dataUri
+      // abre nova aba com data uri
+    },
+    upload (item, index, button) {
+      console.log(item)
+      this.candidato = item
+      this.$root.$emit('bv::show::modal', 'photo', button)
+    },
     editVoto (item, index, button) {
       this.modalInfo.item = item
       this.modalInfo.title = 'Edit Voto'
