@@ -27,6 +27,11 @@ var dd = today.getDate();
 
 
 export default {
+  props: {
+    table: {
+      type: String
+    }
+  },
   data () {
     return {
       form: {

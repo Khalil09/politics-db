@@ -52,7 +52,9 @@ import TablesService from '@/services/TablesService'
 
 export default {
   props: {
-    table: String
+    table: {
+      type: String
+    }
   },
   data () {
     return {

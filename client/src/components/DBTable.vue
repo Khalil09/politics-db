@@ -42,9 +42,26 @@
         <b-button size="sm" @click.stop="row.toggleDetails" class="mr-2">
           Show
         </b-button>
-        <b-button size="sm" @click.stop="editItem(row.item, row.index, $event.target)" class="mr-1">
+        <!-- <b-button size="sm" @click.stop="editItem(row.item, row.index, $event.target)" class="mr-1">
           Edit
-        </b-button>
+        </b-button> -->
+        <b-col md="6" class="my-1">
+          <b-btn size="sm" class="mr-1" v-if="isVoto" v-b-modal.voto>Edit</b-btn>
+          <b-btn size="sm" class="mr-1" v-if="isEndereco" v-b-modal.endereco>Edit</b-btn>
+          <b-btn size="sm" class="mr-1" v-if="isEleitor" v-b-modal.eleitor>Edit</b-btn>
+
+          <b-modal id="voto" title="Add">
+            <editVoto v-bind:table="table" v-bind:form="row.item"></editVoto>
+          </b-modal>
+
+          <b-modal id="endereco" title="Add">
+            <editEndereco v-bind:table="table" v-bind:form="row.item"></editEndereco>
+          </b-modal>
+
+          <b-modal id="eleitor" title="Add">
+            <editEleitor v-bind:table="table" v-bind:form="row.item"></editEleitor>
+          </b-modal>
+        </b-col>
         <b-button size="sm" @click.stop="removeItem(row.item, row.index, $event.target)" class="mr-1">
           Delete
         </b-button>
@@ -79,6 +96,9 @@ import TablesService from '@/services/TablesService'
 import AddEleitor from '@/components/Eleitor/Add.vue'
 import AddEndereco from '@/components/Endereco/Add.vue'
 import AddVoto from '@/components/Voto/Add.vue'
+import EditEleitor from '@/components/Eleitor/Edit.vue'
+import EditEndereco from '@/components/Endereco/Edit.vue'
+import EditVoto from '@/components/Voto/Edit.vue'
 
 export default {
   name: 'DBTable',
@@ -86,7 +106,10 @@ export default {
   components: {
     'addEleitor': AddEleitor,
     'addEndereco': AddEndereco,
-    'addVoto': AddVoto
+    'addVoto': AddVoto,
+    'editEleitor': EditEleitor,
+    'editEndereco': EditEndereco,
+    'editVoto': EditVoto
   },
   props: {
     dt: {
