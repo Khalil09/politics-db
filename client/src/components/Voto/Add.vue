@@ -22,9 +22,8 @@
 <script>
 import TablesService from '@/services/TablesService'
 
-var today = new Date();
-var dd = today.getDate();
-
+var today = new Date()
+var dd = today.getDate()
 
 export default {
   props: {
@@ -50,24 +49,24 @@ export default {
   },
   methods: {
     async onSubmit (evt) {
-      evt.preventDefault();
+      evt.preventDefault()
 
-      const response = await TablesService.createTableData(form, this.table)
+      const response = await TablesService.createTableData(this.form, this.table)
 
-      if(response.error) {
+      if (response.error) {
         console.log(response.error)
       }
     },
-    async getOptionsEleitor() {
+    async getOptionsEleitor () {
       var response = await TablesService.fetchEleitor()
       response.data.forEach((element) => {
-          this.options.push({value: element.id, text: element.titulo_eleitor + ' - ' + element.nome})
+        this.options.push({value: element.id, text: element.titulo_eleitor + ' - ' + element.nome})
       })
     },
-    async getOptionsCandidato() {
+    async getOptionsCandidato () {
       var response = await TablesService.fetchCandidato()
       response.data.forEach((element) => {
-          this.options.push({value: element.id, text: element.titulo_eleitor + ' - ' + element.nome})
+        this.options.push({value: element.id, text: element.titulo_eleitor + ' - ' + element.nome})
       })
     }
   }

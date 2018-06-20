@@ -22,6 +22,7 @@
         <b-btn v-if="isVoto" v-b-modal.voto>Add Voto</b-btn>
         <b-btn v-if="isEndereco" v-b-modal.endereco>Add Endereço</b-btn>
         <b-btn v-if="isEleitor" v-b-modal.eleitor>Add Eleitor</b-btn>
+        <b-btn v-if="isCandidato" v-b-modal.candidato>Add Candidato</b-btn>
 
         <b-modal id="voto" title="Add">
           <addVoto v-bind:table="table"></addVoto>
@@ -33,6 +34,10 @@
 
         <b-modal id="eleitor" title="Add">
           <addEleitor v-bind:table="table"></addEleitor>
+        </b-modal>
+
+        <b-modal id="candidato" title="Add">
+          <addCandidato v-bind:table="table"></addCandidato>
         </b-modal>
       </b-col>
     </b-row>
@@ -49,16 +54,21 @@
           <b-btn size="sm" class="mr-1" v-if="isVoto" v-b-modal.voto>Edit</b-btn>
           <b-btn size="sm" class="mr-1" v-if="isEndereco" v-b-modal.endereco>Edit</b-btn>
           <b-btn size="sm" class="mr-1" v-if="isEleitor" v-b-modal.eleitor>Edit</b-btn>
+          <b-btn size="sm" class="mr-1" v-if="isCandidato" v-b-modal.candidato>Edit</b-btn>
 
-          <b-modal id="voto" title="Add">
+          <b-modal id="voto" title="Edit">
             <editVoto v-bind:table="table" v-bind:form="row.item"></editVoto>
           </b-modal>
 
-          <b-modal id="endereco" title="Add">
+          <b-modal id="endereco" title="Edit">
             <editEndereco v-bind:table="table" v-bind:form="row.item"></editEndereco>
           </b-modal>
 
-          <b-modal id="eleitor" title="Add">
+          <b-modal id="candidato" title="Edit">
+            <editCandidato v-bind:table="table" v-bind:form="row.item"></editCandidato>
+          </b-modal>
+
+          <b-modal id="eleitor" title="Edit">
             <editEleitor v-bind:table="table" v-bind:form="row.item"></editEleitor>
           </b-modal>
         </b-col>
@@ -96,20 +106,23 @@ import TablesService from '@/services/TablesService'
 import AddEleitor from '@/components/Eleitor/Add.vue'
 import AddEndereco from '@/components/Endereco/Add.vue'
 import AddVoto from '@/components/Voto/Add.vue'
+import AddCandidato from '@/components/Candidato/Add.vue'
 import EditEleitor from '@/components/Eleitor/Edit.vue'
 import EditEndereco from '@/components/Endereco/Edit.vue'
 import EditVoto from '@/components/Voto/Edit.vue'
+import EditCandidato from '@/components/Candidato/Edit.vue'
 
 export default {
   name: 'DBTable',
-  components: {},
   components: {
     'addEleitor': AddEleitor,
     'addEndereco': AddEndereco,
     'addVoto': AddVoto,
+    'addCandidato': AddCandidato,
     'editEleitor': EditEleitor,
     'editEndereco': EditEndereco,
-    'editVoto': EditVoto
+    'editVoto': EditVoto,
+    'editCandidato': EditCandidato
   },
   props: {
     dt: {
@@ -131,7 +144,8 @@ export default {
       modalInfo: { title: 'Edit', content: '' },
       isVoto: false,
       isEndereco: false,
-      isEleitor: false
+      isEleitor: false,
+      isCandidato: false
     }
   },
   mounted () {
@@ -145,13 +159,13 @@ export default {
     async removeItem (item, index, button) {
       let response = {}
 
-      if(this.table == 'voto'){
+      if (this.table === 'voto') {
         response = await TablesService.removeVoto(item.id_eleitor, item.id_candidato)
       } else {
         response = await TablesService.removeTableData(this.table, item.id)
       }
 
-      if(response.error){
+      if (response.error) {
         console.log(response.error)
       } else {
         location.reload()
@@ -167,12 +181,14 @@ export default {
       this.currentPage = 1
     },
     checkStuff () {
-      this.isVoto = (this.table == 'voto')
+      this.isVoto = (this.table === 'voto')
       console.log(this.isVoto)
-      this.isEndereco = (this.table == 'endereco')
+      this.isEndereco = (this.table === 'endereco')
       console.log(this.isEndereco)
-      this.isEleitor = (this.table == 'eleitor')
+      this.isEleitor = (this.table === 'eleitor')
       console.log(this.isEleitor)
+      this.isCandidato = (this.table === 'candidato')
+      console.log(this.isCandidato)
     }
   }
 }

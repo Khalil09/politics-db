@@ -46,34 +46,36 @@ export default {
     this.getTable()
   },
   watch: {
-    $route (to, from){
-        this.getTable();
-        location.reload();
+    $route (to, from) {
+      this.getTable()
+      location.reload()
     }
   },
   methods: {
-    async getTables (){
+    async getTables () {
       const response = await TablesService.fetchTables()
-      if(response.error){
 
+      if (response.error) {
+        console.log(response.error)
       }
+
       this.tables = response.data
     },
-    async getTable (){
-      if (!(this.$router.currentRoute.name === "Home")) {
+    async getTable () {
+      if (!(this.$router.currentRoute.name === 'Home')) {
         this.table = this.$router.currentRoute.name.toLowerCase()
         const response = await TablesService.fetchTableData(this.table)
 
         console.log(response)
 
-        if(response.error) {
+        if (response.error) {
           console.log(response.error)
         } else {
           this.items = response.data
           this.isNotHome = true
         }
       }
-    },
+    }
   }
 }
 

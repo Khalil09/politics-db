@@ -104,18 +104,18 @@ export default {
   },
   methods: {
     async onSubmit (evt) {
-      evt.preventDefault();
-      console.log("TABLE: ", this.table)
+      evt.preventDefault()
+
       const response = await TablesService.createTableData(this.form, this.table)
 
-      if(response.error) {
+      if (response.error) {
         console.log(response.error)
       }
     },
-    async getOptionsMunicipio() {
+    async getOptionsMunicipio () {
       var response = await TablesService.fetchMunicipios()
       response.data.forEach((element) => {
-          this.options.push({value: element.id, text: element.nome})
+        this.options.push({value: element.id, text: element.nome})
       })
     }
   }
