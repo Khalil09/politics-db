@@ -12,7 +12,7 @@
       </b-form-group>
 
       <b-form-group id="data_de_nasc" label="Data Nascimento:" label-for="data_de_nascInput">
-        <b-form-input id="data_de_nascInput" type="date" v-model="form.data_de_nasc">
+        <b-form-input id="data_de_nascInput" type="date" date-format="yyyy-MM-dd" v-model="form.data_de_nasc">
         </b-form-input>
       </b-form-group>
 

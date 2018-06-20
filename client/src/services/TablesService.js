@@ -31,17 +31,17 @@ export default {
   },
   fetchCandidato (id) {
     return Api().get('candidato/all')
-  },
-  fetchPessoas() {
-    return Api().get('pessoas/all')
-  },
-  fetchPartidos() {
-    return Api().get('partidos/all')
-  },
-  fetchCargos() {
-    return Api().get('cargos/all')
-  },
-  fetchChapa() {
-    return Api().get('chapa/all')
   }
+  // fetchPessoas() {
+  //   return Api().get('pessoas/all')
+  // },
+  // fetchPartidos() {
+  //   return Api().get('partidos/all')
+  // },
+  // fetchCargos() {
+  //   return Api().get('cargos/all')
+  // },
+  // fetchChapa() {
+  //   return Api().get('chapa/all')
+  // }
 }

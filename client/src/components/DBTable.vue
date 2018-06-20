@@ -19,24 +19,24 @@
     </b-row>
     <b-row>
       <b-col md="6" class="my-1">
-        <b-btn v-if="isVoto" v-b-modal.voto>Add Voto</b-btn>
-        <b-btn v-if="isEndereco" v-b-modal.endereco>Add Endereço</b-btn>
-        <b-btn v-if="isEleitor" v-b-modal.eleitor>Add Eleitor</b-btn>
-        <b-btn v-if="isCandidato" v-b-modal.candidato>Add Candidato</b-btn>
+        <b-btn v-if="isVoto" v-b-modal.votoAdd>Add Voto</b-btn>
+        <b-btn v-if="isEndereco" v-b-modal.enderecoAdd>Add Endereço</b-btn>
+        <b-btn v-if="isEleitor" v-b-modal.eleitorAdd>Add Eleitor</b-btn>
+        <b-btn v-if="isCandidato" v-b-modal.candidatoAdd>Add Candidato</b-btn>
 
-        <b-modal id="voto" title="Add">
+        <b-modal id="votoAdd" title="Add">
           <addVoto v-bind:table="table"></addVoto>
         </b-modal>
 
-        <b-modal id="endereco" title="Add">
+        <b-modal id="enderecoAdd" title="Add">
           <addEndereco v-bind:table="table"></addEndereco>
         </b-modal>
 
-        <b-modal id="eleitor" title="Add">
+        <b-modal id="eleitorAdd" title="Add">
           <addEleitor v-bind:table="table"></addEleitor>
         </b-modal>
 
-        <b-modal id="candidato" title="Add">
+        <b-modal id="candidatoAdd" title="Add">
           <addCandidato v-bind:table="table"></addCandidato>
         </b-modal>
       </b-col>
@@ -47,31 +47,18 @@
         <b-button size="sm" @click.stop="row.toggleDetails" class="mr-2">
           Show
         </b-button>
-        <!-- <b-button size="sm" @click.stop="editItem(row.item, row.index, $event.target)" class="mr-1">
+        <b-button size="sm" v-if="isVoto" @click.stop="editVoto(row.item, row.index, $event.target)" class="mr-1">
           Edit
-        </b-button> -->
-        <b-col md="6" class="my-1">
-          <b-btn size="sm" class="mr-1" v-if="isVoto" v-b-modal.voto>Edit</b-btn>
-          <b-btn size="sm" class="mr-1" v-if="isEndereco" v-b-modal.endereco>Edit</b-btn>
-          <b-btn size="sm" class="mr-1" v-if="isEleitor" v-b-modal.eleitor>Edit</b-btn>
-          <b-btn size="sm" class="mr-1" v-if="isCandidato" v-b-modal.candidato>Edit</b-btn>
-
-          <b-modal id="voto" title="Edit">
-            <editVoto v-bind:table="table" v-bind:form="row.item"></editVoto>
-          </b-modal>
-
-          <b-modal id="endereco" title="Edit">
-            <editEndereco v-bind:table="table" v-bind:form="row.item"></editEndereco>
-          </b-modal>
-
-          <b-modal id="candidato" title="Edit">
-            <editCandidato v-bind:table="table" v-bind:form="row.item"></editCandidato>
-          </b-modal>
-
-          <b-modal id="eleitor" title="Edit">
-            <editEleitor v-bind:table="table" v-bind:form="row.item"></editEleitor>
-          </b-modal>
-        </b-col>
+        </b-button>
+        <b-button size="sm" v-if="isEndereco" @click.stop="editEndereco(row.item, row.index, $event.target)" class="mr-1">
+          Edit
+        </b-button>
+        <b-button size="sm" v-if="isEleitor" @click.stop="editEleitor(row.item, row.index, $event.target)" class="mr-1">
+          Edit
+        </b-button>
+        <b-button size="sm" v-if="isCandidato" @click.stop="editCandidato(row.item, row.index, $event.target)" class="mr-1">
+          Edit
+        </b-button>
         <b-button size="sm" @click.stop="removeItem(row.item, row.index, $event.target)" class="mr-1">
           Delete
         </b-button>
@@ -95,9 +82,20 @@
       </b-col>
     </b-row>
 
-    <!-- Info modal -->
-    <b-modal id="modalInfo" @hide="resetModal" :title="modalInfo.title" ok-only>
-      <pre>{{ modalInfo.content }}</pre>
+    <b-modal id="votoEdit" :title="modalInfo.title">
+      <editVoto v-bind:table="table" v-bind:form="modalInfo.item"></editVoto>
+    </b-modal>
+
+    <b-modal id="enderecoEdit" :title="modalInfo.title">
+      <editEndereco v-bind:table="table" v-bind:form="modalInfo.item"></editEndereco>
+    </b-modal>
+
+    <b-modal id="candidatoEdit" :title="modalInfo.title">
+      <editCandidato v-bind:table="table" v-bind:form="modalInfo.item"></editCandidato>
+    </b-modal>
+
+    <b-modal id="eleitorEdit" :title="modalInfo.title">
+      <editEleitor v-bind:table="table" v-bind:form="modalInfo.item"></editEleitor>
     </b-modal>
 
   </b-container>
@@ -155,8 +153,25 @@ export default {
   },
   computed: {},
   methods: {
-    editItem (item, index, button) {
-      this.$root.$emit('bv::show::modal', 'modalInfo', button)
+    editVoto (item, index, button) {
+      this.modalInfo.item = item
+      this.modalInfo.title = 'Edit Voto'
+      this.$root.$emit('bv::show::modal', 'votoEdit', button)
+    },
+    editCandidato (item, index, button) {
+      this.modalInfo.item = item
+      this.modalInfo.title = 'Edit Candidato'
+      this.$root.$emit('bv::show::modal', 'candidatoEdit', button)
+    },
+    editEndereco (item, index, button) {
+      this.modalInfo.item = item
+      this.modalInfo.title = 'Edit Endereco'
+      this.$root.$emit('bv::show::modal', 'enderecoEdit', button)
+    },
+    editEleitor (item, index, button) {
+      this.modalInfo.item = item
+      this.modalInfo.title = 'Edit Eleitor'
+      this.$root.$emit('bv::show::modal', 'eleitorEdit', button)
     },
     async removeItem (item, index, button) {
       let response = {}
@@ -172,10 +187,6 @@ export default {
       } else {
         location.reload()
       }
-    },
-    resetModal () {
-      this.modalInfo.title = ''
-      this.modalInfo.content = ''
     },
     onFiltered (filteredItems) {
       // Trigger pagination to update the number of buttons/pages due to filtering

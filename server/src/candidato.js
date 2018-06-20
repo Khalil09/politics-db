@@ -7,7 +7,6 @@ module.exports = {
   getAllCandidato: function(req, res){
     connectDB.makeConnection((con) => {
       var q = "SELECT eleitor.nome AS nome, partido.nome AS partido, cargo.nome AS cargo FROM eleitor, partido, cargo, candidato WHERE eleitor.id = candidato.id_pessoa AND partido.id = candidato.id_partido AND cargo.id = candidato.id_cargo";
-
       con.query(q, (err, row) => {
         if (err) throw err;
         res.json(row);
@@ -17,7 +16,6 @@ module.exports = {
   getCandidato: function(req, res){
     connectDB.makeConnection((con) => {
       var q = "SELECT eleitor.nome AS nome, partido.nome AS partido, cargo.nome AS cargo FROM eleitor, partido, cargo, candidato WHERE candidato.id = " + req.param('id') + " AND eleitor.id = candidato.id_pessoa AND partido.id = candidato.id_partido AND cargo.id = candidato.id_cargo";
-
       con.query(q, (err, row) => {
         if (err) throw err;
         res.json(row);
@@ -102,8 +100,7 @@ module.exports = {
         let imgSrcString = `data:image/${extensionName.split('.').pop()};base64,${base64Image}`;
 
         //send image src string into jade compiler
-        var q = "UPDATE candidato SET candidato.foto = \"" + imgSrcString + "\" WHERE id = " + req.param("
-id");
+        var q = "UPDATE candidato SET candidato.foto = \"" + imgSrcString + "\" WHERE id = " + req.param("id");
 
         con.query(q, (err, row) => {
           if (err){

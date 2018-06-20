@@ -28,7 +28,7 @@ export default {
   props: {
     table: {
       type: String
-    }, 
+    },
     form: {
       type: Object
     }
@@ -50,10 +50,10 @@ export default {
     }
   },
   mounted () {
-    this.getOptionsPessoa()
-    this.getOptionsPartido()
-    this.getOptionsCargo()
-    this.getOptionsChapa()
+    // this.getOptionsPessoa()
+    // this.getOptionsPartido()
+    // this.getOptionsCargo()
+    // this.getOptionsChapa()
   },
   methods: {
     async onSubmit (evt) {
@@ -64,31 +64,31 @@ export default {
       if (response.error) {
         console.log(response.error)
       }
-    },
-    async getOptionsPessoa () {
-      var response = await TablesService.fetchPessoas()
-      response.data.forEach((element) => {
-        this.options.push({value: element.id, text: element.nome})
-      })
-    },
-    async getOptionsPartido () {
-      var response = await TablesService.fetchPartidos()
-      response.data.forEach((element) => {
-        this.options.push({value: element.id, text: element.nome})
-      })
-    },
-    async getOptionsCargo () {
-      var response = await TablesService.fetchCargos()
-      response.data.forEach((element) => {
-        this.options.push({value: element.id, text: element.nome})
-      })
-    },
-    async getOptionsChapa () {
-      var response = await TablesService.fetchChapa()
-      response.data.forEach((element) => {
-        this.options.push({value: element.id, text: element.nome})
-      })
     }
+    // async getOptionsPessoa () {
+    //   var response = await TablesService.fetchPessoas()
+    //   response.data.forEach((element) => {
+    //     this.optionsPessoa.push({value: element.id, text: element.nome})
+    //   })
+    // },
+    // async getOptionsPartido () {
+    //   var response = await TablesService.fetchPartidos()
+    //   response.data.forEach((element) => {
+    //     this.optionsPartido.push({value: element.id, text: element.nome})
+    //   })
+    // },
+    // async getOptionsCargo () {
+    //   var response = await TablesService.fetchCargos()
+    //   response.data.forEach((element) => {
+    //     this.optionsCargo.push({value: element.id, text: element.nome})
+    //   })
+    // },
+    // async getOptionsChapa () {
+    //   var response = await TablesService.fetchChapa()
+    //   response.data.forEach((element) => {
+    //     this.optionsChapa.push({value: element.id, text: element.nome})
+    //   })
+    // }
   }
 }
 </script>

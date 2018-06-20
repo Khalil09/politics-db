@@ -91,7 +91,7 @@ app.get('/api/candidato/completo/:id', (req, res) => {
   candidato.getCandidato(req, res);
 })
 
-app.get('/api/candidato/all/', (req, res) => {
+app.get('/api/candidato/all', (req, res) => {
   candidato.getAllCandidato(req, res);
 })
 
