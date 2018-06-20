@@ -2595,3 +2595,505 @@ INSERT INTO chapa (nome)
 INSERT INTO chapa (nome)
    VALUES ('Fowler of Skyreach');
 
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Wano Country', 'All Blue', 'Jyabura', '38078');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Toroa', 'East Blue', 'Enel', '64865');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('St. Poplar', 'South Blue', 'Ben Beckmann', '34626');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Minion Island', 'North Blue', 'Sabo', '89871');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Risky Red Island', 'Grand Line', 'Bastille', '98402');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Notice', 'South Blue', 'Crocodile', '81310');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Rasukaina', 'West Blue', 'Van Auger', '43535');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Baterilla', 'All Blue', 'Bon Clay Mr. 2', '48342');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Cacao Island', 'North Blue', 'Roronoa Zoro', '63898');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Micqueot', 'West Blue', 'Hody Jones', '31124');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Alabasta', 'Grand Line', 'Alvida', '73651');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Shells Town', 'All Blue', 'Shanks', '32752');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Flevance', 'East Blue', 'Corazon', '49782');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Ohara', 'East Blue', 'Lucy', '75078');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Tequila Wolf', 'West Blue', 'Marco', '43732');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Cacao Island', 'South Blue', 'Kyros', '65521');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Edd War', 'Grand Line', 'Edward Newgate', '60656');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Jaya', 'East Blue', 'Miss Valentine', '10319');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Dawn Island', 'South Blue', 'Sugar', '70153');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Raijin Island', 'Grand Line', 'Jyabura', '66737');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Rubeck Island', 'North Blue', 'Miss Valentine', '24527');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Conomi Islands', 'East Blue', 'Lucy', '61504');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Weatheria', 'East Blue', 'Vergo', '45149');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Sabaody Archipelago', 'South Blue', 'Lao G', '17286');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Ilusia', 'All Blue', 'Vergo', '67669');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Enies Lobby', 'East Blue', 'Sengoku', '79309');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Kuraigana Island', 'East Blue', 'Vivi', '49305');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Mystoria Island', 'South Blue', 'Jozu', '75577');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Florian Triangle', 'Grand Line', 'Bon Clay Mr. 2', '89696');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Island of Rare Animals', 'All Blue', 'Basil Hawkins', '27679');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Spider Miles', 'All Blue', 'Kizaru', '72672');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Alabasta', 'South Blue', 'Shirahoshi', '25799');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Boin Archipelago', 'South Blue', 'Sogeking', '28648');
+
+INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES ('Briss Kingdom', 'All Blue', 'Killer', '1694');
+
+INSERT INTO doacao (id, data, valor, id_partido, id_empresa)
+   SELECT  899, '2018-06-09 18:32:38', 3940228439.37, partido.id, empresa.id
+   FROM partido, empresa
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO doacao (id, data, valor, id_partido, id_empresa)
+   SELECT  587, '2018-06-10 19:13:51', 3272745938.9, partido.id, empresa.id
+   FROM partido, empresa
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO doacao (id, data, valor, id_partido, id_empresa)
+   SELECT  817, '2018-06-10 19:31:10', 7151709679.31, partido.id, empresa.id
+   FROM partido, empresa
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO doacao (id, data, valor, id_partido, id_empresa)
+   SELECT  345, '2018-06-14 18:32:41', 2951185863.96, partido.id, empresa.id
+   FROM partido, empresa
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO doacao (id, data, valor, id_partido, id_empresa)
+   SELECT  208, '2018-06-06 18:32:26', 6253410311.98, partido.id, empresa.id
+   FROM partido, empresa
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO doacao (id, data, valor, id_partido, id_empresa)
+   SELECT  311, '2018-06-18 19:24:32', 6905431301.94, partido.id, empresa.id
+   FROM partido, empresa
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO doacao (id, data, valor, id_partido, id_empresa)
+   SELECT  627, '2018-06-08 19:57:36', 7609044459.54, partido.id, empresa.id
+   FROM partido, empresa
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO doacao (id, data, valor, id_partido, id_empresa)
+   SELECT  306, '2018-06-11 18:20:56', 8856638762.17, partido.id, empresa.id
+   FROM partido, empresa
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO doacao (id, data, valor, id_partido, id_empresa)
+   SELECT  455, '2018-06-09 18:52:25', 9742414836.78, partido.id, empresa.id
+   FROM partido, empresa
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO doacao (id, data, valor, id_partido, id_empresa)
+   SELECT  829, '2018-06-16 21:18:55', 8161100610.75, partido.id, empresa.id
+   FROM partido, empresa
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO doacao (id, data, valor, id_partido, id_empresa)
+   SELECT  821, '2018-06-17 20:00:02', 984614759.75, partido.id, empresa.id
+   FROM partido, empresa
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO doacao (id, data, valor, id_partido, id_empresa)
+   SELECT  50, '2018-06-15 18:20:18', 3923984312.38, partido.id, empresa.id
+   FROM partido, empresa
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO doacao (id, data, valor, id_partido, id_empresa)
+   SELECT  939, '2018-06-09 20:18:13', 9887901076.71, partido.id, empresa.id
+   FROM partido, empresa
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO doacao (id, data, valor, id_partido, id_empresa)
+   SELECT  880, '2018-06-13 17:56:38', 7937474802.94, partido.id, empresa.id
+   FROM partido, empresa
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO doacao (id, data, valor, id_partido, id_empresa)
+   SELECT  754, '2018-06-19 20:34:40', 3625563007.89, partido.id, empresa.id
+   FROM partido, empresa
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO doacao (id, data, valor, id_partido, id_empresa)
+   SELECT  459, '2018-06-07 20:42:12', 5819853043.85, partido.id, empresa.id
+   FROM partido, empresa
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO doacao (id, data, valor, id_partido, id_empresa)
+   SELECT  359, '2018-06-14 18:50:23', 4434310960.97, partido.id, empresa.id
+   FROM partido, empresa
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO doacao (id, data, valor, id_partido, id_empresa)
+   SELECT  517, '2018-06-11 21:26:19', 1435083973.58, partido.id, empresa.id
+   FROM partido, empresa
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO doacao (id, data, valor, id_partido, id_empresa)
+   SELECT  80, '2018-06-15 17:30:56', 2208428330.18, partido.id, empresa.id
+   FROM partido, empresa
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO doacao (id, data, valor, id_partido, id_empresa)
+   SELECT  211, '2018-06-12 20:11:22', 9496989557.54, partido.id, empresa.id
+   FROM partido, empresa
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '64668771', 'Arthur Miguel Lobos', '1938-06-05', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO mesario (id_eleitor, id_secao)
+   SELECT eleitor.id, secao.id
+   FROM eleitor, secao
+   WHERE eleitor.nome = 'Arthur Miguel Lobos'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '23744114', 'Lorena Galego', '1966-09-11', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO mesario (id_eleitor, id_secao)
+   SELECT eleitor.id, secao.id
+   FROM eleitor, secao
+   WHERE eleitor.nome = 'Lorena Galego'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '55426271', 'Isabela Godinho Jr.', '1968-01-20', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO mesario (id_eleitor, id_secao)
+   SELECT eleitor.id, secao.id
+   FROM eleitor, secao
+   WHERE eleitor.nome = 'Isabela Godinho Jr.'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '41713789', 'Ana Cecília Aparício Neto', '1990-11-10', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO mesario (id_eleitor, id_secao)
+   SELECT eleitor.id, secao.id
+   FROM eleitor, secao
+   WHERE eleitor.nome = 'Ana Cecília Aparício Neto'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '96896427', 'Srta. Carolina Ramos', '1996-12-07', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO mesario (id_eleitor, id_secao)
+   SELECT eleitor.id, secao.id
+   FROM eleitor, secao
+   WHERE eleitor.nome = 'Srta. Carolina Ramos'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '58977120', 'Djalma Carvalheira', '1929-04-11', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO mesario (id_eleitor, id_secao)
+   SELECT eleitor.id, secao.id
+   FROM eleitor, secao
+   WHERE eleitor.nome = 'Djalma Carvalheira'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '76977308', 'Sarah Carneiro', '1906-01-05', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO mesario (id_eleitor, id_secao)
+   SELECT eleitor.id, secao.id
+   FROM eleitor, secao
+   WHERE eleitor.nome = 'Sarah Carneiro'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '58792203', 'Júlia da Cunha Jr.', '1914-11-09', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO mesario (id_eleitor, id_secao)
+   SELECT eleitor.id, secao.id
+   FROM eleitor, secao
+   WHERE eleitor.nome = 'Júlia da Cunha Jr.'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '66379568', 'Dra. Yago da Terra', '1954-04-17', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO mesario (id_eleitor, id_secao)
+   SELECT eleitor.id, secao.id
+   FROM eleitor, secao
+   WHERE eleitor.nome = 'Dra. Yago da Terra'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '7653663', 'Maria Cecília de Borba Neto', '1980-04-03', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO mesario (id_eleitor, id_secao)
+   SELECT eleitor.id, secao.id
+   FROM eleitor, secao
+   WHERE eleitor.nome = 'Maria Cecília de Borba Neto'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '99311596', 'Sr. César Duarte', '1949-10-29', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO mesario (id_eleitor, id_secao)
+   SELECT eleitor.id, secao.id
+   FROM eleitor, secao
+   WHERE eleitor.nome = 'Sr. César Duarte'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '99472943', 'Luiz Miguel Arriaga', '1905-09-28', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO mesario (id_eleitor, id_secao)
+   SELECT eleitor.id, secao.id
+   FROM eleitor, secao
+   WHERE eleitor.nome = 'Luiz Miguel Arriaga'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '81842486', 'Rafaela Campos Neto', '1962-05-05', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO mesario (id_eleitor, id_secao)
+   SELECT eleitor.id, secao.id
+   FROM eleitor, secao
+   WHERE eleitor.nome = 'Rafaela Campos Neto'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '62071058', 'Kauê Ouriques', '1940-11-16', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO mesario (id_eleitor, id_secao)
+   SELECT eleitor.id, secao.id
+   FROM eleitor, secao
+   WHERE eleitor.nome = 'Kauê Ouriques'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '87847728', 'Emanuel Carvalho', '1914-10-01', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO mesario (id_eleitor, id_secao)
+   SELECT eleitor.id, secao.id
+   FROM eleitor, secao
+   WHERE eleitor.nome = 'Emanuel Carvalho'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '31956882', 'Luiz Gustavo Louzada', '1941-03-21', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO mesario (id_eleitor, id_secao)
+   SELECT eleitor.id, secao.id
+   FROM eleitor, secao
+   WHERE eleitor.nome = 'Luiz Gustavo Louzada'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '52812811', 'Melissa Corrêa', '1976-07-14', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO mesario (id_eleitor, id_secao)
+   SELECT eleitor.id, secao.id
+   FROM eleitor, secao
+   WHERE eleitor.nome = 'Melissa Corrêa'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '59035569', 'Adriana de Lins Neto', '1913-04-03', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO mesario (id_eleitor, id_secao)
+   SELECT eleitor.id, secao.id
+   FROM eleitor, secao
+   WHERE eleitor.nome = 'Adriana de Lins Neto'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '4131250', 'João Lucas da Luz', '1943-08-14', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO mesario (id_eleitor, id_secao)
+   SELECT eleitor.id, secao.id
+   FROM eleitor, secao
+   WHERE eleitor.nome = 'João Lucas da Luz'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '14196888', 'Maria Fernanda Bittencourt', '1942-03-03', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO mesario (id_eleitor, id_secao)
+   SELECT eleitor.id, secao.id
+   FROM eleitor, secao
+   WHERE eleitor.nome = 'Maria Fernanda Bittencourt'
+   ORDER BY rand()
+   LIMIT 1;
+

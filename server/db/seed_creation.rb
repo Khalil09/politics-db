@@ -14,6 +14,7 @@ def rand_alphanum(length)
 end
 
 $house_nums = Array(1..1000)
+$doacao = Array(1..1000)
 $partido = [15, 13, 45, 11, 12, 14, 25, 22, 40, 23]
 
 
@@ -125,6 +126,32 @@ def chapa_insert
    VALUES ('#{Faker::GameOfThrones.house}');\n\n"
 end
 
+def empresa_insert
+    "INSERT INTO empresa (tipo_de_empresa, razao_social, nome_fantasia, cnpj)
+     VALUES (\"#{Faker::OnePiece.island}\", '#{Faker::OnePiece.sea}', '#{Faker::OnePiece.character}', '#{rand(100000)}');\n\n"
+end
+
+def doacao_insert
+  "INSERT INTO doacao (id, data, valor, id_partido, id_empresa)
+   SELECT  #{$doacao.delete($doacao.sample)}, '#{Faker::Time.backward(14, :evening).to_s.chomp(' -0300')}', #{rand(1000.2..9999999999.99).round(2)}, partido.id, empresa.id
+   FROM partido, empresa
+   ORDER BY rand()
+   LIMIT 1;\n\n"
+end
+
+def mesario_insert
+  name = Faker::Name.name
+  eleitor_insert(name) + 
+  "INSERT INTO mesario (id_eleitor, id_secao)
+   SELECT eleitor.id, secao.id
+   FROM eleitor, secao
+   WHERE eleitor.nome = '#{name}'
+   ORDER BY rand()
+   LIMIT 1;\n\n"
+end
+
+
+
 sqlinsert = {
   'municipio' => :mun_insert, 
   'endereco' => :addr_insert,
@@ -136,7 +163,10 @@ sqlinsert = {
   'candidato' => :candidato_insert,
   'presidente' => :pres_insert,
   'voto' => :voto_insert,
-  'chapa' => :chapa_insert
+  'chapa' => :chapa_insert,
+  'empresa' => :empresa_insert,
+  'doacao' => :doacao_insert,
+  'mesario' => :mesario_insert
 }
 
 File.open(seed_name, 'a') do |file|
