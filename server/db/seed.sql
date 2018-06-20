@@ -1353,24 +1353,10 @@ INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_e
    ORDER BY rand()
    LIMIT 1;
 
-INSERT INTO candidato (id_pessoa, id_partido, id_cargo)
-   SELECT eleitor.id, partido.id, 3
-   FROM eleitor, partido
-   WHERE eleitor.nome = 'Vitória Garcês Jr.'
-   ORDER BY rand()
-   LIMIT 1;
-
 INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
    SELECT '37465139', 'Célia Martim Neto', '1983-07-31', 'homem', secao.id, endereco.cep, endereco.id
    FROM secao, endereco, zona, local
    WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO candidato (id_pessoa, id_partido, id_cargo)
-   SELECT eleitor.id, partido.id, 6
-   FROM eleitor, partido
-   WHERE eleitor.nome = 'Célia Martim Neto'
    ORDER BY rand()
    LIMIT 1;
 
@@ -1381,24 +1367,10 @@ INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_e
    ORDER BY rand()
    LIMIT 1;
 
-INSERT INTO candidato (id_pessoa, id_partido, id_cargo)
-   SELECT eleitor.id, partido.id, 6
-   FROM eleitor, partido
-   WHERE eleitor.nome = 'Benjamin Passarinho Neto'
-   ORDER BY rand()
-   LIMIT 1;
-
 INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
    SELECT '14991413', 'Gabrielly Farias', '1920-12-30', 'mulher', secao.id, endereco.cep, endereco.id
    FROM secao, endereco, zona, local
    WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO candidato (id_pessoa, id_partido, id_cargo)
-   SELECT eleitor.id, partido.id, 4
-   FROM eleitor, partido
-   WHERE eleitor.nome = 'Gabrielly Farias'
    ORDER BY rand()
    LIMIT 1;
 
@@ -1409,13 +1381,6 @@ INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_e
    ORDER BY rand()
    LIMIT 1;
 
-INSERT INTO candidato (id_pessoa, id_partido, id_cargo)
-   SELECT eleitor.id, partido.id, 5
-   FROM eleitor, partido
-   WHERE eleitor.nome = 'Carlos Melo'
-   ORDER BY rand()
-   LIMIT 1;
-
 INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
    SELECT '58218993', 'Guilherme Alves', '1941-04-28', 'mulher', secao.id, endereco.cep, endereco.id
    FROM secao, endereco, zona, local
@@ -1423,24 +1388,10 @@ INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_e
    ORDER BY rand()
    LIMIT 1;
 
-INSERT INTO candidato (id_pessoa, id_partido, id_cargo)
-   SELECT eleitor.id, partido.id, 4
-   FROM eleitor, partido
-   WHERE eleitor.nome = 'Guilherme Alves'
-   ORDER BY rand()
-   LIMIT 1;
-
 INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
    SELECT '26740266', 'Dra. Fabrício Rezende', '1990-09-06', 'mulher', secao.id, endereco.cep, endereco.id
    FROM secao, endereco, zona, local
    WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO candidato (id_pessoa, id_partido, id_cargo)
-   SELECT eleitor.id, partido.id, 3
-   FROM eleitor, partido
-   WHERE eleitor.nome = 'Dra. Fabrício Rezende'
    ORDER BY rand()
    LIMIT 1;
 
@@ -1458,20 +1409,6 @@ INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_e
    ORDER BY rand()
    LIMIT 1;
 
-INSERT INTO candidato (id_pessoa, id_partido, id_cargo)
-   SELECT eleitor.id, partido.id, 1
-   FROM eleitor, partido
-   WHERE eleitor.nome = 'Dr. Maria Júlia Goulart'
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO candidato (id_pessoa, id_partido, id_cargo)
-   SELECT eleitor.id, partido.id, 2
-   FROM eleitor, partido
-   WHERE eleitor.nome = 'João Lucas Fontinhas'
-   ORDER BY rand()
-   LIMIT 1;
-
 INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
    SELECT '17863931', 'Srta. Noah Bouças', '1947-08-17', 'mulher', secao.id, endereco.cep, endereco.id
    FROM secao, endereco, zona, local
@@ -1483,20 +1420,6 @@ INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_e
    SELECT '7576104', 'Letícia Lobos', '1944-02-03', 'mulher', secao.id, endereco.cep, endereco.id
    FROM secao, endereco, zona, local
    WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO candidato (id_pessoa, id_partido, id_cargo)
-   SELECT eleitor.id, partido.id, 1
-   FROM eleitor, partido
-   WHERE eleitor.nome = 'Srta. Noah Bouças'
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO candidato (id_pessoa, id_partido, id_cargo)
-   SELECT eleitor.id, partido.id, 2
-   FROM eleitor, partido
-   WHERE eleitor.nome = 'Letícia Lobos'
    ORDER BY rand()
    LIMIT 1;
 
@@ -1514,20 +1437,6 @@ INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_e
    ORDER BY rand()
    LIMIT 1;
 
-INSERT INTO candidato (id_pessoa, id_partido, id_cargo)
-   SELECT eleitor.id, partido.id, 1
-   FROM eleitor, partido
-   WHERE eleitor.nome = 'Enzo Gabriel Campos'
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO candidato (id_pessoa, id_partido, id_cargo)
-   SELECT eleitor.id, partido.id, 2
-   FROM eleitor, partido
-   WHERE eleitor.nome = 'Patricia Brum'
-   ORDER BY rand()
-   LIMIT 1;
-
 INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
    SELECT '89596182', 'Alessandro da Cruz', '1951-04-27', 'mulher', secao.id, endereco.cep, endereco.id
    FROM secao, endereco, zona, local
@@ -1539,20 +1448,6 @@ INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_e
    SELECT '78525641', 'Fabrício Junqueira', '1988-08-01', 'homem', secao.id, endereco.cep, endereco.id
    FROM secao, endereco, zona, local
    WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO candidato (id_pessoa, id_partido, id_cargo)
-   SELECT eleitor.id, partido.id, 1
-   FROM eleitor, partido
-   WHERE eleitor.nome = 'Alessandro da Cruz'
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO candidato (id_pessoa, id_partido, id_cargo)
-   SELECT eleitor.id, partido.id, 2
-   FROM eleitor, partido
-   WHERE eleitor.nome = 'Fabrício Junqueira'
    ORDER BY rand()
    LIMIT 1;
 
@@ -1569,21 +1464,6 @@ INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_e
    WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
    ORDER BY rand()
    LIMIT 1;
-
-INSERT INTO candidato (id_pessoa, id_partido, id_cargo)
-   SELECT eleitor.id, partido.id, 1
-   FROM eleitor, partido
-   WHERE eleitor.nome = 'Isabelly das Neves'
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO candidato (id_pessoa, id_partido, id_cargo)
-   SELECT eleitor.id, partido.id, 2
-   FROM eleitor, partido
-   WHERE eleitor.nome = 'Antonella Regueira'
-   ORDER BY rand()
-   LIMIT 1;
-
 
 INSERT INTO urna (id_secao)
    SELECT secao.id
@@ -3124,6 +3004,146 @@ INSERT INTO candidato (id_pessoa, id_partido, id_cargo, id_chapa)
    SELECT eleitor.id, partido.id, 6, chapa.id
    FROM eleitor, partido, chapa
    WHERE eleitor.nome = 'Vinicius Rodrigues'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '34559064', 'Emanuelly Amoreira', '1976-05-31', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO candidato (id_pessoa, id_partido, id_cargo, id_chapa)
+   SELECT eleitor.id, partido.id, 4, chapa.id
+   FROM eleitor, partido, chapa
+   WHERE eleitor.nome = 'Emanuelly Amoreira'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '98553883', 'Olívia Parreira', '1927-10-17', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO candidato (id_pessoa, id_partido, id_cargo, id_chapa)
+   SELECT eleitor.id, partido.id, 3, chapa.id
+   FROM eleitor, partido, chapa
+   WHERE eleitor.nome = 'Olívia Parreira'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '71207323', 'Sra. Deneval Almeida', '1948-10-09', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO candidato (id_pessoa, id_partido, id_cargo, id_chapa)
+   SELECT eleitor.id, partido.id, 5, chapa.id
+   FROM eleitor, partido, chapa
+   WHERE eleitor.nome = 'Sra. Deneval Almeida'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '7234019', 'Dr. Yago da Bandeira', '1913-04-13', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO candidato (id_pessoa, id_partido, id_cargo, id_chapa)
+   SELECT eleitor.id, partido.id, 4, chapa.id
+   FROM eleitor, partido, chapa
+   WHERE eleitor.nome = 'Dr. Yago da Bandeira'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '96625685', 'Dra. Lorenzo Goulart', '1906-05-05', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO candidato (id_pessoa, id_partido, id_cargo, id_chapa)
+   SELECT eleitor.id, partido.id, 6, chapa.id
+   FROM eleitor, partido, chapa
+   WHERE eleitor.nome = 'Dra. Lorenzo Goulart'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '43669764', 'Thiago Morais', '1960-04-22', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO candidato (id_pessoa, id_partido, id_cargo, id_chapa)
+   SELECT eleitor.id, partido.id, 4, chapa.id
+   FROM eleitor, partido, chapa
+   WHERE eleitor.nome = 'Thiago Morais'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '16939071', 'Otávio Chaves Jr.', '1969-08-21', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO candidato (id_pessoa, id_partido, id_cargo, id_chapa)
+   SELECT eleitor.id, partido.id, 3, chapa.id
+   FROM eleitor, partido, chapa
+   WHERE eleitor.nome = 'Otávio Chaves Jr.'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '56613117', 'Norberto da Fonseca Filho', '1963-06-25', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO candidato (id_pessoa, id_partido, id_cargo, id_chapa)
+   SELECT eleitor.id, partido.id, 6, chapa.id
+   FROM eleitor, partido, chapa
+   WHERE eleitor.nome = 'Norberto da Fonseca Filho'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '80580882', 'Marcia dos Reis', '1960-08-24', 'homem', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO candidato (id_pessoa, id_partido, id_cargo, id_chapa)
+   SELECT eleitor.id, partido.id, 5, chapa.id
+   FROM eleitor, partido, chapa
+   WHERE eleitor.nome = 'Marcia dos Reis'
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO eleitor (titulo_eleitor, nome, data_de_nasc, genero, id_secao, cep_endereco, id_endereco)
+   SELECT '16886160', 'Joao Negrão', '1974-11-05', 'mulher', secao.id, endereco.cep, endereco.id
+   FROM secao, endereco, zona, local
+   WHERE secao.id_local = local.id AND local.id_zona = zona.id  AND zona.id_municipio = endereco.id_municipio
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO candidato (id_pessoa, id_partido, id_cargo, id_chapa)
+   SELECT eleitor.id, partido.id, 3, chapa.id
+   FROM eleitor, partido, chapa
+   WHERE eleitor.nome = 'Joao Negrão'
    ORDER BY rand()
    LIMIT 1;
 
