@@ -1705,705 +1705,6 @@ INSERT INTO urna (id_secao)
    ORDER BY rand()
    LIMIT 1;
 
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-11 19:24:59', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-11 18:22:39', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-14 17:25:33', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-05 17:36:41', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-03 20:34:11', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-08 19:53:48', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-12 21:41:43', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-11 20:48:46', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-06 21:20:16', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-07 18:57:30', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-14 20:05:24', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-03 20:09:33', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-15 18:35:13', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-16 17:13:20', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-12 21:44:24', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-16 18:55:56', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-12 20:41:55', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-06 20:21:15', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-05 18:57:44', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-10 21:51:05', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-11 18:49:17', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-10 18:53:53', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-11 21:39:37', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-09 21:23:18', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-14 17:42:47', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-13 18:12:36', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-12 19:57:37', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-03 17:40:22', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-08 17:56:55', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-12 17:56:12', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-03 20:35:48', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-08 19:33:00', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-07 17:35:56', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-11 19:31:44', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-15 20:54:11', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-11 19:47:33', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-14 17:25:00', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-11 20:07:03', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-09 18:02:18', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-13 19:23:10', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-15 17:38:31', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-12 19:26:43', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-08 21:55:31', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-08 21:20:25', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-10 21:47:11', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-12 20:21:59', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-13 21:29:44', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-06 18:50:59', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-09 18:40:06', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-04 18:36:42', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-13 20:47:47', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-05 21:38:44', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-04 17:12:12', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-11 21:17:49', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-07 17:34:10', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-12 19:46:56', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-04 21:24:25', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-09 18:55:41', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-16 17:33:10', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-16 18:18:45', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-11 18:07:37', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-11 19:56:18', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-04 17:33:04', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-12 19:48:03', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-09 17:52:00', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-10 17:02:47', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-12 17:26:28', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-03 18:45:25', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-15 17:31:49', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-07 18:28:57', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-03 20:52:20', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-04 18:42:15', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-13 19:16:06', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-03 19:54:18', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-12 20:08:14', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-13 18:22:48', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-13 21:28:00', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-05 20:39:59', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-05 21:21:45', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-15 20:57:42', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-13 19:03:39', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-11 19:55:54', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-06 21:00:25', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-08 18:37:13', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-07 20:00:33', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-04 18:54:45', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-14 20:06:13', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-13 20:47:44', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-11 18:23:40', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-11 19:41:51', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-07 18:48:09', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-15 19:16:15', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-12 20:09:23', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-10 19:27:29', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-12 18:55:59', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-11 18:31:06', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-14 17:53:50', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-13 19:47:01', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-11 18:35:52', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
-
-INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
-   SELECT '2018-06-06 19:47:03', eleitor.id, candidato.id, urna.id
-   FROM eleitor, candidato, urna
-   WHERE eleitor.id_secao = urna.id_secao
-   ORDER BY rand()
-   LIMIT 1;
 
 INSERT INTO chapa (nome)
    VALUES ('Stark of Winterfell');
@@ -3147,3 +2448,702 @@ INSERT INTO candidato (id_pessoa, id_partido, id_cargo, id_chapa)
    ORDER BY rand()
    LIMIT 1;
 
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-11 19:24:59', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-11 18:22:39', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-14 17:25:33', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-05 17:36:41', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-03 20:34:11', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-08 19:53:48', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-12 21:41:43', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-11 20:48:46', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-06 21:20:16', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-07 18:57:30', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-14 20:05:24', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-03 20:09:33', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-15 18:35:13', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-16 17:13:20', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-12 21:44:24', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-16 18:55:56', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-12 20:41:55', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-06 20:21:15', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-05 18:57:44', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-10 21:51:05', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-11 18:49:17', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-10 18:53:53', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-11 21:39:37', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-09 21:23:18', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-14 17:42:47', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-13 18:12:36', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-12 19:57:37', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-03 17:40:22', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-08 17:56:55', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-12 17:56:12', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-03 20:35:48', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-08 19:33:00', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-07 17:35:56', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-11 19:31:44', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-15 20:54:11', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-11 19:47:33', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-14 17:25:00', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-11 20:07:03', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-09 18:02:18', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-13 19:23:10', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-15 17:38:31', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-12 19:26:43', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-08 21:55:31', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-08 21:20:25', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-10 21:47:11', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-12 20:21:59', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-13 21:29:44', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-06 18:50:59', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-09 18:40:06', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-04 18:36:42', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-13 20:47:47', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-05 21:38:44', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-04 17:12:12', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-11 21:17:49', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-07 17:34:10', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-12 19:46:56', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-04 21:24:25', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-09 18:55:41', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-16 17:33:10', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-16 18:18:45', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-11 18:07:37', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-11 19:56:18', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-04 17:33:04', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-12 19:48:03', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-09 17:52:00', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-10 17:02:47', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-12 17:26:28', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-03 18:45:25', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-15 17:31:49', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-07 18:28:57', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-03 20:52:20', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-04 18:42:15', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-13 19:16:06', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-03 19:54:18', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-12 20:08:14', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-13 18:22:48', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-13 21:28:00', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-05 20:39:59', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-05 21:21:45', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-15 20:57:42', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-13 19:03:39', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-11 19:55:54', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-06 21:00:25', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-08 18:37:13', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-07 20:00:33', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-04 18:54:45', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-14 20:06:13', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-13 20:47:44', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-11 18:23:40', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-11 19:41:51', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-07 18:48:09', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-15 19:16:15', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-12 20:09:23', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-10 19:27:29', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-12 18:55:59', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-11 18:31:06', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-14 17:53:50', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-13 19:47:01', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-11 18:35:52', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
+
+INSERT INTO voto (data, id_eleitor, id_candidato, id_urna)
+   SELECT '2018-06-06 19:47:03', eleitor.id, candidato.id, urna.id
+   FROM eleitor, candidato, urna
+   WHERE eleitor.id_secao = urna.id_secao
+   ORDER BY rand()
+   LIMIT 1;
