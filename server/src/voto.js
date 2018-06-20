@@ -13,7 +13,7 @@ module.exports = {
 
   getVotoSafe: function(req, res){
     connectDB.makeConnection((con) => {
-      var q = "select candidato.id, safe_voto.data from candidato, safe_voto where safe_voto.id_candidato = " + req.param("id") + " AND candidato.id = safe_voto.id_candidato";
+      var q = "select safe_voto.contador, eleitor.nome from candidato, safe_voto, eleitor where safe_voto.id_candidato = " + req.param("id") + " AND candidato.id = safe_voto.id_candidato AND eleitor.id = candidato.id_pessoa";
       con.query(q, (err, row) => {
         if (err) throw err;
         res.json(row);
@@ -32,10 +32,11 @@ module.exports = {
   },
 
   createVoto: function(req, res){
-    var q = "INSERT INTO voto (data, id_eleitor, id_candidato) VALUES (\"" +
+    var q = "INSERT INTO voto (data, id_eleitor, id_candidato, id_urna) VALUES (\"" +
       req.body.data + "\"," +
       req.body.id_eleitor + " , " +
-      req.body.id_candidato + ")";
+      req.body.id_candidato + " , " +
+      req.body.id_urna + ")";
 
     console.log(q);
 

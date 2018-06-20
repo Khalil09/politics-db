@@ -14,22 +14,6 @@ app.use(bodyParser.json())
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/api/tables', (req, res) => {
-  indexTable.getTablesName(req, res);
-})
-
-app.get('/api/votoseguro', (req, res) => {
-  voto.getAllVotos(req, res);
-})
-
-app.get('/api/:table', (req, res) => {
-  indexTable.getAll(req, res);
-})
-
-app.get('/api/:table/:id', (req, res) => {
-  indexTable.getById(req, res);
-})
-
 // Eleitor CRUD
 app.get('/api/eleitor/completo/:id', (req, res) => {
   eleitor.getEleitor(req, res);
@@ -115,4 +99,38 @@ app.get('/api/candidato/sendphoto/:id', (req, res) => {
   candidato.sendPhoto(req, res);
 })
 
+app.get('/api/tables', (req, res) => {
+  indexTable.getTablesName(req, res);
+})
+
+app.get('/api/votoseguro', (req, res) => {
+  voto.getAllVotos(req, res);
+})
+
+app.get('/api/:table', (req, res) => {
+  indexTable.getAll(req, res);
+})
+
+app.get('/api/:table/:id', (req, res) => {
+  indexTable.getById(req, res);
+})
+
 app.listen(process.env.PORT || 8081);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
