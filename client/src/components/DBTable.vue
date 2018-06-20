@@ -78,10 +78,12 @@
       </template>
       <template slot="row-details" slot-scope="row">
         <b-card>
-          <b-row v-for="(v, k, idx) in row.item" class="mb-2">
-            <b-col sm="3" class="text-sm-right"><b>{{ k }}</b></b-col>
-            <b-col>{{ v }}</b-col>
-          </b-row>
+          <div v-for="(v, k) in row.item">
+            <b-row class="mb-2">
+              <b-col sm="3" class="text-sm-right"><b>{{ k }}</b></b-col>
+              <b-col>{{ v }}</b-col>
+            </b-row>
+          </div>
           <b-button size="sm" @click="row.toggleDetails">Collapse</b-button>
         </b-card>
       </template>
