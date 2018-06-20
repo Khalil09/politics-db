@@ -25,16 +25,6 @@
         <b-form-select v-model="form.id_municipio" :options="options" class="mb-3" />
       </b-form-group>
 
-      <b-form-group id="id_municipio" label="Id Municipio:" label-for="id_municipioInput">
-        <b-form-input id="id_municipioInput" type="select" v-model="form.id_municipio">
-        </b-form-input>
-      </b-form-group>
-
-      <b-form-group id="id_secao" label="Id Secao:" label-for="id_secaoInput">
-        <b-form-input id="id_secaoInput" type="number" v-model="form.id_secao">
-        </b-form-input>
-      </b-form-group>
-
       <b-form-group id="id" label="Número:" label-for="idInput">
         <b-form-input id="idInput" type="number" v-model="form.id">
         </b-form-input>

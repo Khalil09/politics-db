@@ -32,16 +32,23 @@ export default {
   fetchCandidato (id) {
     return Api().get('candidato/all')
   },
-  fetchPessoas() {
-    return Api().get('pessoas/all')
+  addPhotoToCandidato (req, id) {
+    return Api().post('candidato/addphoto', req)
   },
-  fetchPartidos() {
-    return Api().get('partidos/all')
-  },
-  fetchCargos() {
-    return Api().get('cargos/all')
-  },
-  fetchChapa() {
-    return Api().get('chapa/all')
+  fetchPhoto (id) {
+    return Api().get('candidato/sendphoto/' + id)
   }
+
+  // fetchPessoas() {
+  //   return Api().get('pessoas/all')
+  // },
+  // fetchPartidos() {
+  //   return Api().get('partidos/all')
+  // },
+  // fetchCargos() {
+  //   return Api().get('cargos/all')
+  // },
+  // fetchChapa() {
+  //   return Api().get('chapa/all')
+  // }
 }

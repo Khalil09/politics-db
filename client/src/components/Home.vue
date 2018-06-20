@@ -3,18 +3,6 @@
     <navbar></navbar>
     <b-container fluid>
       <ParticlesJS></ParticlesJS>
-      <div class="container">
-        <h2>Upload file</h2>
-        <vue-base64-file-upload 
-          class="v1"
-          accept="image/png,image/jpeg"
-          image-class="v1-image"
-          input-class="v1-input"
-          :max-size="customImageMaxSize"
-          @size-exceeded="onSizeExceeded"
-          @file="onFile"
-          @load="onLoad" />
-      </div>
       <b-row>
         <b-col cols="2">
           <br/>
@@ -36,7 +24,6 @@ import ParticlesJS from '@/components/Particles'
 import TableList from '@/components/TableList.vue'
 import DBTable from '@/components/DBTable.vue'
 import TablesService from '@/services/TablesService'
-import VueBase64FileUpload from 'vue-base64-file-upload';
 
 export default {
   name: 'Home',
@@ -44,8 +31,7 @@ export default {
     'navbar': Navbar,
     'ParticlesJS': ParticlesJS,
     'TableList': TableList,
-    'dbTable': DBTable,
-    VueBase64FileUpload
+    'dbTable': DBTable
   },
   data () {
     return {
@@ -90,17 +76,6 @@ export default {
           this.isNotHome = true
         }
       }
-    },
-    onFile(file) {
-      console.log(file); // file object
-    },
-
-    onLoad(dataUri) {
-      console.log(dataUri); // data-uri string
-    },
-
-    onSizeExceeded(size) {
-      alert(`Image ${size}Mb size exceeds limits of ${this.customImageMaxSize}Mb!`);
     }
   }
 }
