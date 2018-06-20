@@ -84,9 +84,9 @@ end
 def candidato_insert
   name = Faker::Name.name
   eleitor_insert(name) + 
-  "INSERT INTO candidato (id_pessoa, id_partido, id_cargo)
-   SELECT eleitor.id, partido.id, #{rand(4) + 3}
-   FROM eleitor, partido
+  "INSERT INTO candidato (id_pessoa, id_partido, id_cargo, id_chapa)
+   SELECT eleitor.id, partido.id, #{rand(4) + 3}, chapa.id
+   FROM eleitor, partido, chapa
    WHERE eleitor.nome = '#{name}'
    ORDER BY rand()
    LIMIT 1;\n\n"
