@@ -84,38 +84,57 @@ module.exports = {
 
   addPhoto: function(req, res){
     connectDB.makeConnection((con) => {
-      fs.readFile(`${process.cwd()}/db/fotos/dirceu.jpg`, (err, data) => {
-        //error handle
+      //get image file extension name
+      // let extensionName = path.extname(`${process.cwd()}/db/fotos/dirceu.png`);
+
+      //convert image file to base64-encoded string
+      // let base64Image = new Buffer(data, 'binary').toString('base64');
+
+      //combine all strings
+      // let imgSrcString = `data:image/${extensionName.split('.').pop()};base64,${base64Image}`;
+      let imgSrcString = req.body.foto;
+
+      //send image src string into jade compiler
+      var q = "UPDATE candidato SET candidato.foto = \"" + imgSrcString + "\" WHERE id = " + req.body.id;
+
+      con.query(q, (err, row) => {
         if (err){
-          res.status(500);
-          res.json({"error": "Não foi possível ler a foto"})
+          res.status(400);
+          res.json({"error": "Erro ao incluir foto em candidato"})
+          res.json(err)
         }
-        //get image file extension name
-        let extensionName = path.extname(`${process.cwd()}/db/fotos/dirceu.png`);
+        res.status(200)
+        if(row.affectedRows == 0) {
+          res.json({"message": "Não existe tal candidato"});
+        } else {
+          res.json({"message": "Foto incluida com sucesso"});
+        }
+      });
+    }, true)
+  },
 
-        //convert image file to base64-encoded string
-        let base64Image = new Buffer(data, 'binary').toString('base64');
+  sendPhoto: function(req, res){
+    connectDB.makeConnection((con) => {
+      //get image file extension name
+      // let extensionName = path.extname(`${process.cwd()}/db/fotos/dirceu.png`);
 
-        //combine all strings
-        let imgSrcString = `data:image/${extensionName.split('.').pop()};base64,${base64Image}`;
+      //convert image file to base64-encoded string
+      // let base64Image = new Buffer(data, 'binary').toString('base64');
 
-        //send image src string into jade compiler
-        var q = "UPDATE candidato SET candidato.foto = \"" + imgSrcString + "\" WHERE id = " + req.param("id");
+      //combine all strings
+      // let imgSrcString = `data:image/${extensionName.split('.').pop()};base64,${base64Image}`;
+      //send image src string into jade compiler
+      var q = "SELECT candidato.foto FROM candidato WHERE id = " + req.param("id");
 
-        con.query(q, (err, row) => {
-          if (err){
-            res.status(400);
-            res.json({"error": "Erro ao incluir foto em candidato"})
-            res.json(err)
-          }
-          res.status(200)
-          if(row.affectedRows == 0) {
-            res.json({"message": "Não existe tal candidato"});
-          } else {
-            res.json({"message": "Foto incluida com sucesso"});
-          }
-        });
-      })
+      con.query(q, (err, row) => {
+        if (err){
+          res.status(400);
+          res.json({"error": "Erro ao incluir foto em candidato"})
+          res.json(err)
+        }
+        res.status(200)
+        res.json(row);
+      });
     }, true)
   }
 
