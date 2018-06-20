@@ -4,12 +4,15 @@
       <b-form-group id="id_pessoa" label="Pessoa:" label-for="id_pessoaInput">
         <b-form-select v-model="form.id_pessoa" :options="optionsPessoa" class="mb-3" />
       </b-form-group>
+
       <b-form-group id="id_partido" label="Partido:" label-for="id_partidoInput">
         <b-form-select v-model="form.id_partido" :options="optionsPartido" class="mb-3" />
       </b-form-group>
+
       <b-form-group id="id_cargo" label="Cargo:" label-for="id_cargoInput">
         <b-form-select v-model="form.id_cargo" :options="optionsCargo" class="mb-3" />
       </b-form-group>
+
       <b-form-group id="id_chapa" label="Chapa:" label-for="id_chapaInput">
         <b-form-select v-model="form.id_chapa" :options="optionsChapa" class="mb-3" />
       </b-form-group>

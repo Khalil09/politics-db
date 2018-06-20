@@ -29,7 +29,7 @@ export default {
   fetchEleitor () {
     return Api().get('eleitor')
   },
-  fetchCandidato (id) {
+  fetchCandidato () {
     return Api().get('candidato/all')
   },
   addPhotoToCandidato (req, id) {
@@ -37,6 +37,9 @@ export default {
   },
   fetchPhoto (id) {
     return Api().get('candidato/sendphoto/' + id)
+  },
+  fetchUrna () {
+    return Api().get('urna')
   }
 
   // fetchPessoas() {
