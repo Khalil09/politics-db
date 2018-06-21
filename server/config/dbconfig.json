@@ -1,0 +1,10 @@
+{
+    "config_database": {
+        "host": "localhost",
+        "user": "politics",
+        "password": "12345678",
+        "database": "politics_db",
+        "port": "3306",
+        "connectionLimit": 5000
+    }
+}

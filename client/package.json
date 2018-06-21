@@ -16,9 +16,13 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap-vue": "^2.0.0-rc.10",
-    "jquery": "^1.9.1",
+    "jquery": "^3.3.1",
+    "particles.js": "^2.0.0",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-base64-file-upload": "^1.0.4",
+    "vue-router": "^3.0.1",
+    "vue-sticky": "^3.3.4",
+    "vue2-sidebar": "0.0.9"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
